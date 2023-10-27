@@ -2,15 +2,16 @@ import Link from "next/link";
 import React from "react";
 
 const pages = {
-  LowMaintanancePets: "/community/lowMP",
-  Companionship: "/community/companionship",
-  PetCare: "/community/petCare",
+  Overview: "/",
+  PetProfiles: "/",
+  Application: "/",
+  Appointment: "/",
 };
 
-function community() {
+function adoption() {
   return (
     <div>
-      <h1 className="text-4xl flex justify-center">Community </h1>
+      <h1 className="text-4xl flex justify-center">Adoption process</h1>
       <ul className="text-2xl flex-column">
         {Object.entries(pages).map(([name, path]) => (
           <li key={name} className="dropdown">
@@ -22,4 +23,4 @@ function community() {
   );
 }
 
-export default community;
+export default adoption;
