@@ -2,9 +2,9 @@ import Link from "next/link";
 import React from "react";
 
 const pages = {
-  Dogs: "",
-  Cats: "",
-  Other: "",
+  Dogs: "/pets/choosePet/dogs",
+  Cats: "/pets/choosePet/cats",
+  Other: "/pets/choosePet/other",
 };
 
 function ChoosePet() {
