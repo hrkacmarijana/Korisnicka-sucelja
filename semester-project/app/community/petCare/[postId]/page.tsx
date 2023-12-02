@@ -1,4 +1,4 @@
-import { Post } from "../page";
+import { Post } from "../../companionship/page";
 
 interface Params {
   postId: string;
