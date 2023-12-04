@@ -12,9 +12,11 @@ const Card: React.FC<cardProps> = ({ id, imageUrl, name, text, visible }) => {
   return (
     <div className="flex flex-col w-80 gap-4 text-center">
       <div className="w-150 h-150 relative">
-        <img
+        <Image
           src={imageUrl}
           alt={id}
+          width={300}
+          height={300}
           className="rounded-lg w-full h-full object-cover"
         />
       </div>

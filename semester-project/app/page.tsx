@@ -42,7 +42,7 @@ export default function Home() {
           <h1 className="text-4xl">
             Pets change our lives.
             <br />
-            We're on a quest to change theirs.
+            We are on a quest to change theirs.
           </h1>
           <span className="text-xl">
             Quest for True Paw is a nonprofit organization dedicated to
@@ -119,14 +119,14 @@ export default function Home() {
               id="story1"
               imageUrl="/story1.png"
               name="Rachel and Luna"
-              text="In the quiet shelter, Luna, a playful pup with soulful eyes, caught Rachel's heart instantly. Despite Luna's troubled past, Rachel's patient love and unwavering commitment transformed Luna into a beacon of joy, proving that in each other, they found their forever home."
+              text="In the quiet shelter, Luna, a playful pup with soulful eyes, caught Rachels heart instantly. Despite Lunas troubled past, Rachels patient love and unwavering commitment transformed Luna into a beacon of joy, proving that in each other, they found their forever home."
               visible={true}
             />
             <Card
               id="story2"
               imageUrl="/story2.png"
               name="Max and Bailey"
-              text="Amidst the bustling city, Max met Bailey, a scrappy dog with a heart full of loyalty, forming an unbreakable bond that weathered life's storms together, proving that sometimes, the best adventures come with a wagging tail by your side."
+              text="Amidst the bustling city, Max met Bailey, a scrappy dog with a heart full of loyalty, forming an unbreakable bond that weathered life storms together, proving that sometimes, the best adventures come with a wagging tail by your side."
               visible={true}
             />
             <Card
