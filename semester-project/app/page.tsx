@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "./components/button/page";
 import Card from "./components/card/page";
+import "./globals.css";
 import {
   FaInstagram,
   FaFacebookF,
@@ -11,25 +12,22 @@ import {
 export default function Home() {
   return (
     <>
-      <div className="bg-image relative pb-56 text-lb">
-        <Image
-          src="/home-bg.png"
-          alt="home-bg"
-          layout="fill"
-          objectFit="cover"
-          className="-z-10"
-        />
-        <div className=" flex flex-col items-center gap-10 pt-32 px-10">
-          <Image src="/logo.png" alt="logo-img" width={300} height={200} />
-          <h1 className="text-5xl flex justify-center max-w-xl text-center font-bold">
-            Our four-legged friends need your help.
-          </h1>
-          <div className="text-2xl">
-            <Button
-              title="Adopt a friend"
-              backgroundColor="#EBE9E9"
-              textColor="#7A6F69"
-            />
+      <div className="bg-image relative text-lb">
+        <div className="background-container">
+          <div className=" flex flex-col items-center gap-10 pt-20 px-10 pb-2">
+            <div className="w-340 h-250 relative">
+              <img src="/logo.png" alt="Logo" className="custom-image" />
+            </div>
+            <h1 className="text-5xl flex justify-center max-w-xl text-center font-bold">
+              Our four-legged friends need your help.
+            </h1>
+            <div className="text-2xl">
+              <Button
+                title="Adopt a friend"
+                backgroundColor="#EBE9E9"
+                textColor="#7A6F69"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -83,29 +81,27 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="section-4 relative py-64 flex justify-center px-10">
-        <Image
-          src="/bg2.png"
-          alt="bg2"
-          layout="fill"
-          objectFit="cover"
-          className="-z-10 relative"
-        />
-        <div className="flex flex-col max-w-3xl gap-10 text-center text-lb ">
-          <h1 className="text-5xl font-bold  bg-black bg-opacity-50 max-w-fit self-center">
-            How You Can Help
-          </h1>
-          <span className=" bg-black bg-opacity-50">
-            There are countless ways you can help us in our quest for paws. You
-            can make a donation (however big or small), join our fundraiser
-            events, or volunteer your time and home as a foster parent.
-          </span>
-          <div className="text-2xl">
-            <Button
-              title="Donate"
-              backgroundColor="#EBE9E9"
-              textColor="#7A6F69"
-            />
+      <div className="bg-image ">
+        <div className="background-container2">
+          <div className="section-4 relative flex justify-center px-10 py-28">
+            <div className="flex flex-col max-w-3xl gap-20 text-center text-lb ">
+              <h1 className="text-5xl font-bold  bg-black bg-opacity-50 max-w-fit self-center">
+                How You Can Help
+              </h1>
+              <span className=" bg-black bg-opacity-50">
+                There are countless ways you can help us in our quest for paws.
+                You can make a donation (however big or small), join our
+                fundraiser events, or volunteer your time and home as a foster
+                parent.
+              </span>
+              <div className="text-2xl">
+                <Button
+                  title="Donate"
+                  backgroundColor="#EBE9E9"
+                  textColor="#7A6F69"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -144,13 +140,10 @@ export default function Home() {
         <div className="  flex justify-between flex-wrap gap-10">
           <div className="col1 flex flex-col gap-2 pt-4">
             <div className="logo-name gap-3 ">
-              <Image
-                src="/logo.png"
-                alt="logo"
-                width={150}
-                height={150}
-                objectFit="cover"
-              />
+              <div className="w-150 h-150 relative">
+                <img src="/logo.png" />
+              </div>
+
               <span>TRUE PAW org.</span>
             </div>
             <br />
