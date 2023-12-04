@@ -16,7 +16,13 @@ export default function Home() {
         <div className="background-container">
           <div className=" flex flex-col items-center gap-10 pt-20 px-10 pb-2">
             <div className="w-340 h-250 relative">
-              <img src="/logo.png" alt="Logo" className="custom-image" />
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={150}
+                height={150}
+                className="custom-image"
+              />
             </div>
             <h1 className="text-5xl flex justify-center max-w-xl text-center font-bold">
               Our four-legged friends need your help.
@@ -141,7 +147,13 @@ export default function Home() {
           <div className="col1 flex flex-col gap-2 pt-4">
             <div className="logo-name gap-3 ">
               <div className="w-150 h-150 relative">
-                <img src="/logo.png" />
+                <Image
+                  src="/logo.png"
+                  alt="logo"
+                  className="w-150 h-150 relative"
+                  width={150}
+                  height={150}
+                />
               </div>
 
               <span>TRUE PAW org.</span>
