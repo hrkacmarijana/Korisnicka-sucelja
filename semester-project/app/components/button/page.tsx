@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className="py-2 px-4 rounded-2xl font-bold px-8"
+      className="py-2 rounded-2xl font-bold px-8"
       style={buttonStyle}>
       {title}
     </button>

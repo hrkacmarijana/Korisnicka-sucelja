@@ -20,38 +20,3 @@ body {
   color: rgb(var(--foreground-rgb));
  
 }
-
-.w-300 {
-  width: 300px;
-}
-
-.h-300 {
-  height: 300px;
-}
-
-.bg-image {
-  position: relative;
-}
-
-.background-container {
-  background-image: url("/home-bg.png"); /* Replace with your image path */
-  background-size: cover;
-
-  padding-top: 5ic;
-  
-  padding-bottom: 10ic;
-  
-}
-
-.background-container2 {
-  background-image: url("/bg2.png"); /* Replace with your image path */
-  background-size: cover;
-  padding: 10ic;
-}
-.custom-image {
-  width: 370px;
-  height: 250px;
-  object-fit: cover;
-  position: relative;
-  
-}
