@@ -19,7 +19,7 @@ export default function Home() {
           objectFit="cover"
           className="-z-10"
         />
-        <div className=" flex flex-col items-center gap-10 pt-32 ">
+        <div className=" flex flex-col items-center gap-10 pt-32 px-10">
           <Image src="/logo.png" alt="logo-img" width={300} height={200} />
           <h1 className="text-5xl flex justify-center max-w-xl text-center font-bold">
             Our four-legged friends need your help.
