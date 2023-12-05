@@ -1,6 +1,4 @@
-"use client";
 import Image from "next/image";
-import Button from "./components/button/page";
 import Card from "./components/card/page";
 import "./globals.css";
 import { useEffect, useState } from "react";
@@ -31,11 +29,9 @@ export default function Home() {
                 Our four-legged friends need your help.
               </h1>
               <div className="text-2xl">
-                <Button
-                  title="Adopt a friend"
-                  backgroundColor="#EBE9E9"
-                  textColor="#7A6F69"
-                />
+                <button className="bg-lb text-mb rounded-2xl font-bold px-8 py-2 text-2xl">
+                  Adopt a friend
+                </button>
               </div>
             </div>
           </div>
@@ -87,7 +83,9 @@ export default function Home() {
             />
           </div>
           <div className="text-2xl">
-            <Button title="See more pets" />
+            <button className="bg-mb text-lb rounded-2xl font-bold px-8 py-2 text-2xl">
+              See more pets
+            </button>
           </div>
         </div>
       </div>
@@ -112,11 +110,9 @@ export default function Home() {
                 parent.
               </span>
               <div className="text-2xl">
-                <Button
-                  title="Donate"
-                  backgroundColor="#EBE9E9"
-                  textColor="#7A6F69"
-                />
+                <button className="bg-lb text-mb rounded-2xl font-bold px-8 py-2 text-2xl">
+                  Donate
+                </button>
               </div>
             </div>
           </div>
@@ -149,7 +145,9 @@ export default function Home() {
             />
           </div>
           <div className="text-2xl">
-            <Button title="Read more" />
+            <button className="bg-mb text-lb rounded-2xl font-bold px-8 py-2 text-2xl">
+              Read more
+            </button>
           </div>
         </div>
       </div>
