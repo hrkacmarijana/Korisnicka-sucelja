@@ -40,17 +40,18 @@ const Navbar: FC<NavbarProps> = ({ pages, accountIcon }) => {
                 }
               : {}
           }>
-          {Object.entries(pages).map(([name, path]) => (
-            <li
-              key={name}
-              className="dropdown border-b-2 border-white p-1 lg:last-of-type:border-b-2 last-of-type:border-0">
-              <Link href={path}>
-                <button className="bg-org text-white rounded-xl py-2 px-8 text-lg font-bold">
-                  {name}
-                </button>
-              </Link>
-            </li>
-          ))}
+          {pages &&
+            Object.entries(pages).map(([name, path], index) => (
+              <li
+                key={name}
+                className="dropdown border-b-2 border-white p-1 lg:last-of-type:border-b-2 last-of-type:border-0">
+                <Link href={path}>
+                  <button className="bg-org text-white rounded-xl py-2 px-8 text-lg font-bold">
+                    {name}
+                  </button>
+                </Link>
+              </li>
+            ))}
         </ul>
 
         <div className="flex lg:hidden xl:hidden 2xl:hidden">
@@ -75,19 +76,20 @@ const Navbar: FC<NavbarProps> = ({ pages, accountIcon }) => {
               ? "flex flex-col mt-16 py-1 px-5 rounded-xl bg-lb border-2 border-org z-10"
               : "hidden"
           }`}>
-          {Object.entries(accountIcon).map(([name, path]) => (
-            <li
-              key={name}
-              className="dropdown border-b-2 border-org p-1 last-of-type:border-none">
-              <Link href={path}>
-                <button
-                  className="bg-lb
+          {accountIcon &&
+            Object.entries(accountIcon).map(([name, path], index) => (
+              <li
+                key={name}
+                className="dropdown border-b-2 border-org p-1 last-of-type:border-none">
+                <Link href={path}>
+                  <button
+                    className="bg-lb
                  text-org rounded-xl py-2 px-8 text-lg font-bold">
-                  {name}
-                </button>
-              </Link>
-            </li>
-          ))}
+                    {name}
+                  </button>
+                </Link>
+              </li>
+            ))}
         </ul>
       </div>
     </nav>

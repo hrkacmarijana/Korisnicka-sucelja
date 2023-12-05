@@ -52,11 +52,12 @@ const Footer: FC<footerProps> = ({ pages }) => {
         </div>
         <div className="col3">
           <ul className="flex flex-col gap-2 pt-20">
-            {Object.entries(pages).map(([name, path]) => (
-              <li key={name}>
-                <Link href={path}>{name}</Link>
-              </li>
-            ))}
+            {pages &&
+              Object.entries(pages).map(([name, path], index) => (
+                <li key={name}>
+                  <Link href={path}>{name}</Link>
+                </li>
+              ))}
           </ul>
         </div>
 
