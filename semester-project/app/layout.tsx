@@ -22,7 +22,7 @@ const pages: Record<string, `/${string}`> = {
 
 const accountIcon: Record<string, `/${string}`> = {
   SignUp: "/",
-  LogOn: "/",
+  LogIn: "/",
 };
 
 export default function RootLayout({
