@@ -37,7 +37,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="section-2 flex justify-center text-center py-60 px-5">
+      <div
+        id="section-2"
+        className=" flex justify-center text-center py-60 px-5">
         <div className="flex flex-col max-w-3xl gap-7">
           <h1 className="text-4xl">
             Pets change our lives.
@@ -56,7 +58,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="section-3 bg-lb flex justify-center w-full py-24 px-5">
+      <div
+        id="section-3"
+        className="section-3 bg-lb flex justify-center w-full py-24 px-5">
         <div className="flex flex-col items-center justify-center w-full gap-20">
           <h1 className="text-5xl  ">Meet our pets</h1>
           <div className="flex flex-wrap  justify-around w-full px-24 gap-10">
@@ -98,7 +102,7 @@ export default function Home() {
             objectFit="cover"
             className="-z-10"
           />
-          <div className="section-4 relative flex justify-center px-5 py-28">
+          <div className="section-4 relative flex justify-center px-5 py-56">
             <div className="flex flex-col max-w-3xl gap-20 text-center text-lb ">
               <h1 className="text-5xl font-bold  bg-black bg-opacity-50 max-w-fit self-center">
                 How You Can Help
