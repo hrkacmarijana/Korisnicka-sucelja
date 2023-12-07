@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "@/node_modules/next/link";
-import Navbar from "./components/Navbar/page";
-import Footer from "./components/Footer/page";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -23,6 +23,7 @@ const pages: Record<string, `/${string}`> = {
 const accountIcon: Record<string, `/${string}`> = {
   SignUp: "/",
   LogIn: "/",
+  Account: "/account",
 };
 
 export default function RootLayout({

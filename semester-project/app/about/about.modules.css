@@ -1,0 +1,31 @@
+h1{
+    text-align: center;
+}
+
+    h2{
+    font-size:2.5rem;
+    font-weight: bold;
+}
+
+
+.s{
+   display: flex;
+   flex-direction: column;
+   gap: 70px;
+  
+}
+
+span{
+    font-size:x-large;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container span{
+    width: 55%
+}
+
+
