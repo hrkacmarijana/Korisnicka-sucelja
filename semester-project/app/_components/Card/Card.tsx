@@ -6,8 +6,9 @@ export interface cardProps {
   imageUrl: string;
   name: string;
   text: string;
+  species: string;
 }
-const Card: React.FC<cardProps> = ({ id, imageUrl, name, text }) => {
+const Card: React.FC<cardProps> = ({ id, imageUrl, name, text, species }) => {
   return (
     <div className="flex flex-col w-80 gap-4 text-center">
       <div className="w w-80 h-80 relative">
