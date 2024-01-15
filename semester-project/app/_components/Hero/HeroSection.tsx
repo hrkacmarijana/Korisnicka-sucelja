@@ -1,30 +1,11 @@
+require("dotenv").config();
+
 import Image from "next/image";
 import Card from "@/app/_components/Card/Card";
 import Link from "next/link";
 import "./hero.modules.css";
 import CardSlider from "../CardSlider/CardSlider";
-
-const card = [
-  {
-    id: "pet1",
-    name: "Rocky",
-    text: "Meet Rocky, a playful and affectionate pup from our shelter, eagerly waiting for a loving family to call his own.",
-    imageUrl: "/dog1.png",
-  },
-  {
-    id: "pet2",
-    name: "Whiskers",
-    text: "Meet Whiskers, a charming and curious feline, ready to grace your home with endless purrs of affection.",
-    imageUrl: "/cat1.png",
-  },
-  {
-    id: "pet3",
-    name: "Luna",
-    text: "Meet Luna, a gentle and loving  companion, seeking a forever home filled with cuddles and warmth",
-
-    imageUrl: "/dog2.png",
-  },
-];
+import contentfulService from "@/app/lib/contentfulClient";
 
 const card2 = [
   {
@@ -32,6 +13,7 @@ const card2 = [
     imageUrl: "/story1.png",
     name: "Rachel and Luna",
     text: "In the quiet shelter, Luna, a playful pup with soulful eyes, caught Rachels heart instantly. Despite Lunas troubled past, Rachels patient love and unwavering commitment transformed Luna into a beacon of joy, proving that in each other, they found their forever home.",
+    species: "cat",
   },
 
   {
@@ -39,6 +21,7 @@ const card2 = [
     imageUrl: "/story2.png",
     name: "Max and Bailey",
     text: "Amidst the bustling city, Max met Bailey, a scrappy dog with a heart full of loyalty, forming an unbreakable bond that weathered life storms together, proving that sometimes, the best adventures come with a wagging tail by your side.",
+    species: "cat",
   },
 
   {
@@ -46,22 +29,27 @@ const card2 = [
     imageUrl: "/story3.png",
     name: "Claire and Mia",
     text: "In a quaint corner of town, Claire encountered Mia, a graceful feline with an air of mystery, and their shared moments of quiet understanding and playful antics painted a portrait of a friendship that spoke volumes without a single meow uttered.",
+    species: "cat",
   },
 ];
 
-export default function HeroSection() {
-  const cards = card.map((animal) => ({
+export default async function HeroSection() {
+  const animals = await contentfulService.getAllAnimals();
+  const cards = animals.map((animal) => ({
     id: animal.id,
+    imageUrl: animal.featuredImage.url,
     name: animal.name,
-    text: animal.text,
-    imageUrl: animal.imageUrl,
+    text: animal.description,
+    species: animal.species,
   }));
-  const stories = card2.map((story) => ({
-    id: story.id,
-    name: story.name,
-    text: story.text,
-    imageUrl: story.imageUrl,
-  }));
+
+  // const stories = card2.map((story) => ({
+  //   id: story.id,
+  //   name: story.name,
+  //   text: story.text,
+  //   imageUrl: story.imageUrl,
+  //   species: "cat",
+  // }));
   return (
     <>
       <div id="section-1 " className=" relative text-lb">
@@ -154,7 +142,7 @@ export default function HeroSection() {
         <div className="flex flex-col items-center justify-center w-full gap-48">
           <h1 className="text-5xl  ">Success stories</h1>
           <div className="flex flex-wrap justify-around w-full px-24 gap-10">
-            <CardSlider cards={stories} />
+            {/* <CardSlider cards={stories} /> */}
           </div>
           <div className="text-2xl">
             <Link
