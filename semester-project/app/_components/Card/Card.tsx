@@ -1,0 +1,29 @@
+import Image from "next/image";
+import React from "react";
+
+export interface cardProps {
+  id: string;
+  imageUrl: string;
+  name: string;
+  text: string;
+}
+const Card: React.FC<cardProps> = ({ id, imageUrl, name, text }) => {
+  return (
+    <div className="flex flex-col w-80 gap-4 text-center">
+      <div className="w w-80 h-80 relative">
+        <Image
+          src={imageUrl}
+          alt={id}
+          layout="fill"
+          objectFit="cover"
+          className="rounded-lg"
+        />
+      </div>
+
+      <h1 className="text-2xl font-bold">{name}</h1>
+      <span>{text}</span>
+    </div>
+  );
+};
+
+export default Card;
