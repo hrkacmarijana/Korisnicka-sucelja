@@ -1,0 +1,41 @@
+.pets{
+    display: flex;
+    flex-direction: column;
+  
+    padding: 10rem 8rem;
+    gap: 5vh;
+}
+
+.text-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vh;
+
+    
+}
+
+
+.text-section h1{
+    font-size: 4.5vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.text-section p{
+    font-size: 2vw;
+}
+
+
+
+@media screen and (max-width: 600px){
+    
+    .pets{
+        
+        padding: 10rem 5rem;
+      
+    }
+     
+}

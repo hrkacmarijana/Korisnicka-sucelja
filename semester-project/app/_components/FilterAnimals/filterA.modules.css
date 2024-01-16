@@ -1,0 +1,11 @@
+.animals-list {
+    padding: 1em 3em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    justify-content: center;
+}
+
+.container{
+    gap: 100px
+}

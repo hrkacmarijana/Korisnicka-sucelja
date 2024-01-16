@@ -1,24 +1,41 @@
-import Link from "next/link";
-import React from "react";
+import { Metadata } from "next";
+import Card from "../_components/Card/Card";
+import "./pets.modules.css";
+import { useState } from "react";
+import contentfulService from "../lib/contentfulClient";
+import FilterAnimals from "@/app/_components/FilterAnimals/FilterAnimals";
 
-const pages = {
-  ChoosePet: "/pets/choosePet",
-  Adoption: "/pets/adoption",
+export const metadata: Metadata = {
+  title: "About Us",
 };
 
-function Pets() {
+async function AboutUs() {
+  const animals = await contentfulService.getAllAnimals();
+
   return (
-    <div>
-      <h1 className="text-4xl flex justify-center">Pets</h1>
-      <ul className="text-2xl flex-column">
-        {Object.entries(pages).map(([name, path]) => (
-          <li key={name} className="dropdown">
-            <Link href={path}>{name}</Link>
-          </li>
-        ))}
-      </ul>
+    <div className="pets">
+      <div className="text-section">
+        <h1>ADOPTABLE PETS</h1>
+        <p>
+          Welcome to our Pets section, a heartwarming space where you can
+          explore a delightful array of adoptable companions eagerly awaiting
+          their forever homes. From playful cats to loyal dogs and charming
+          critters, our diverse selection showcases the unique personalities and
+          stories of each furry friend. Every adoption tale is a chance to make
+          a lasting connection, offering not just a home to these animals but a
+          promise of companionship and love. Browse through the profiles, each
+          adorned with captivating images and endearing descriptions, and
+          discover the perfect match for your lifestyle. Join us in the joyful
+          journey of pet adoption, where the unconditional love of a new furry
+          family member awaits.
+        </p>
+        <h1>CHOOSE YOUR FURRY FRIEND TODAY</h1>
+      </div>
+      <div className="pets-section">
+        <FilterAnimals animals={animals} />
+      </div>
     </div>
   );
 }
 
-export default Pets;
+export default AboutUs;
