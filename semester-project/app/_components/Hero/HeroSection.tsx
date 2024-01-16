@@ -43,13 +43,13 @@ export default async function HeroSection() {
     species: animal.species,
   }));
 
-  // const stories = card2.map((story) => ({
-  //   id: story.id,
-  //   name: story.name,
-  //   text: story.text,
-  //   imageUrl: story.imageUrl,
-  //   species: "cat",
-  // }));
+  const stories = card2.map((story) => ({
+    id: story.id,
+    name: story.name,
+    text: story.text,
+    imageUrl: story.imageUrl,
+    species: "cat",
+  }));
   return (
     <>
       <div id="section-1 " className=" relative text-lb">
@@ -142,7 +142,7 @@ export default async function HeroSection() {
         <div className="flex flex-col items-center justify-center w-full gap-48">
           <h1 className="text-5xl  ">Success stories</h1>
           <div className="flex flex-wrap justify-around w-full px-24 gap-10">
-            {/* <CardSlider cards={stories} /> */}
+            <CardSlider cards={stories} />
           </div>
           <div className="text-2xl">
             <Link

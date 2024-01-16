@@ -121,6 +121,8 @@ const getAllAnimals = async (): Promise<TypeAnimalListItem[]>=> {
 };
 
 
+
+
 const contentfulService = {
   getAllAnimals,
 };
