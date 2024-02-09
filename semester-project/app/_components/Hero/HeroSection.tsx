@@ -5,6 +5,7 @@ import Card from "@/app/_components/Card/Card";
 import Link from "next/link";
 import "./hero.modules.css";
 import CardSlider from "../CardSlider/CardSlider";
+import Logo from "@/components/Logo/Logo";
 import contentfulService from "@/app/lib/contentfulClient";
 
 const card2 = [
@@ -54,38 +55,38 @@ export default async function HeroSection() {
     <>
       <div id="section-1 " className=" relative text-lb">
         <div className="background-container">
-          <div className="home-container ">
-            <div className="logo-container">
-              <Image
-                src="/logo.png"
-                alt="Logo"
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
-            <div className="content-container ">
-              <h1 className=" flex justify-center max-w-xl text-center font-bold">
-                Our four-legged friends need your help.
-              </h1>
-              <div className="button-container">
-                <Link
-                  href="\pets"
-                  className="button bg-purple-600 text-white rounded-2xl hover:bg-purple-800">
-                  FIND YOUR FRIEND
-                </Link>
-              </div>
+          <Image
+            className="background-container"
+            src="/home-bg.png"
+            alt="bg-image"
+            fill={true}
+            priority
+          />
+
+          <div className="content-container ">
+            <Logo />
+            <h1 className=" max-w-xxl text-center font-bold">
+              Our four-legged friends need your help.
+            </h1>
+            <div className="button-container">
+              <Link
+                href="\pets"
+                className="button bg-purple-600 text-white  hover:bg-purple-800"
+              >
+                FIND YOUR FRIEND
+              </Link>
             </div>
           </div>
         </div>
       </div>
-      <div id="section-2" className=" flex justify-center text-center ">
-        <div className="flex flex-col max-w-3xl gap-7">
-          <h1 className="text-4xl">
+      <div id="section-2">
+        <div className="text-cnt">
+          <h1>
             Pets change our lives.
             <br />
             We are on a quest to change theirs.
           </h1>
-          <span className="text-xl">
+          <span>
             Quest for True Paw is a nonprofit organization dedicated to
             rescuing, fostering, and rehoming the abandoned, sick, and injured
             animals around our city.
@@ -94,12 +95,18 @@ export default async function HeroSection() {
             With your help, we hope to make a difference in the lives of these
             wonderful animals.
           </span>
+          <div className="button-container">
+            <Link
+              href="\about"
+              className="button bg-purple-600 text-white  hover:bg-purple-800"
+            >
+              MORE ABOUT US
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div
-        id="section-3"
-        className="section-3 bg-lb flex justify-center w-full py-24 px-5">
+      <div id="section-3" className="section-3 bg-lb  w-full ">
         <div className="flex flex-col items-center justify-center w-full gap-20">
           <h1 className="text-5xl  ">Meet our pets</h1>
           <div className="flex flex-row flex-wrap  justify-around w-full px-24 gap-10">
@@ -108,7 +115,8 @@ export default async function HeroSection() {
           <div className="text-2xl">
             <Link
               href="/pets"
-              className="bg-purple-600 text-white rounded-2xl font-bold px-8 py-4 text-2xl hover:bg-purple-800 ">
+              className="bg-purple-600 text-white rounded-2xl font-bold px-8 py-4 text-2xl hover:bg-purple-800 "
+            >
               SEE MORE PETS
             </Link>
           </div>
@@ -130,7 +138,8 @@ export default async function HeroSection() {
               <div className="button-container">
                 <Link
                   href="/donations"
-                  className="button bg-white text-purple-700 rounded-2xl font-bold px-8 py-4 text-2xl hover:bg-lb">
+                  className="button bg-white text-purple-700 rounded-2xl font-bold px-8 py-4 text-2xl hover:bg-lb"
+                >
                   DONATE
                 </Link>
               </div>
@@ -147,7 +156,8 @@ export default async function HeroSection() {
           <div className="text-2xl">
             <Link
               href="/community"
-              className="bg-purple-600 text-white rounded-2xl font-bold px-8 py-4 text-2xl hover:bg-purple-800">
+              className="bg-purple-600 text-white rounded-2xl font-bold px-8 py-4 text-2xl hover:bg-purple-800"
+            >
               READ MORE
             </Link>
           </div>

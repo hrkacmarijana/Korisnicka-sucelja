@@ -1,186 +1,124 @@
 .background-container{
-    background-image: url('/home-bg.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
+  position: relative;
+ height: 100vh;
+ text-transform: uppercase;
 
 }
-
-.logo-container{
-    position: relative;
-    width: 40vw;
-    height: 30vh;
-    max-height:max-content;
-    max-height: 200px;
-
-}
-
-
 
 .content-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-   
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+row-gap: 2vw;
+text-align: center;
+z-index: 9;
+ 
 }
 
-.home-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10rem 1.25rem 11rem 1.25rem;
-}
 
 .content-container h1 {
-    font-size: 3.5vw; 
-  
-  }
+ font-size: 3.5vw; 
+ color: white;
+
+}
+
 .button-container{
-    font-size: 1.5rem;
+ font-size: 1vh;
 }
 
 .button{
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 2rem;
+
+ font-size: 2vw;
+ font-weight: bold;
+ border-radius: 25px;
+ padding: 1vw 3vw;
+ text-transform: uppercase;
+ font-size: 2.5vw;
+
 }
 
 #section-2{
-  padding:  15rem 1.25rem;
+padding:  20vw 10vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+
+}
+
+.text-cnt{
+display: flex;
+flex-direction: column;
+row-gap: 5vh;
+}
+
+.text-cnt h1{
+font-size: 3vw;
+}
+
+
+.text-cnt span{
+font-size: 1.5vw;
+}
+
+#section-2 .button{
+font-size: 2vw;
+}
+
+#section-3{
+display: flex;
+justify-content: center;
 }
 
 .bg-cnt-2{
-  background-image: url('/bg2.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
+background-image: url('/bg2.png');
+background-size: 100%;
+background-repeat: no-repeat;
 }  
 
 .section-4{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 14rem 1.25rem ;
+position: relative;
+display: flex;
+justify-content: center;
+padding: 14rem 1.25rem ;
 }
 
 
 
-  @media screen and (min-width: 1200px) {
-    .content-container h1{
-    font-size: 4vw; 
-  }
-
-  .logo-container{
-    max-height: 200px;
-}
-.button-container{
-    font-size: 4vW;
-  }
-  .home-container{
-    
-    padding: 8rem 1.25rem 11rem 1.25rem;
-  }
+@media (max-width: 1024px) {
+.background-container {
+   height: 90vh;
 }
 
-@media screen and (max-width: 1000px){
-  .home-container{
- 
-    padding: 5rem 1.25rem 11rem 1.25rem;
-  }
-
-  .section-4{
-    
-    padding: 8rem 1.25rem ;
-  }
+.home-container {
+   padding-top: 30vh;
+   padding-bottom: 10vh;
+   width: 100%;
 }
 
-@media  screen and (max-width: 750px) {
-
-  .button{
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-
-    line-height: 1rem;
-  }
-
-  .home-container{
-    padding-top: 5rem;
-    padding-bottom: 0.5rem;
-  gap: 150px;
-    color: black;
-    font-size: 5vw;
-  }
-
-  .section-4{
-      
-    padding: 3rem 1.25rem ;
-  }
-
-  .text-section h1{
-    font-size: 2.5rem;
-  }
-
-
-
+.content-container  {
+   font-size: 4.5vw;
+ padding-top: 1vh;
 }
 
-@media  screen and (min-width: 750px) and (max-width: 800px){
-  .section-4{
-      
-    padding: 2rem 1.25rem ;
-  }
+.button{
+font-size: 3vw;
+padding: 0.7vh 3vw;
+
+}
 }
 
-@media screen and (max-width: 600px) {
-  .home-container{
-    gap: 180px;
-    }
- 
-   .content-container{
-
-     gap: 15px;
-   }
-
-   .content-container h1{
-   font-size: 5vw; 
- }
-   .logo-container{
-       max-height: 100px;
-   }
-   .button-container{
-       font-size: 3vW;
-     }
-
-     #section-2{
-       padding:  5rem 1.25rem;
-     }
-
-     .text-section{
-      gap: 30px
-     }
-
-     .text-section h1{
-      font-size: 2.5rem;
-    }
-
-
-     
-     
+@media (max-width: 768px) {
+.background-container {
+   height: 50vh;
 }
 
-@media screen and (max-width: 450px) {
-  .home-container{
-    gap: 100px;
-   
-  }
-
-  .text-section h1{
-    font-size: 1.5rem;
-  }
-
-  .text-section span{
-    font-size: 0.5rem;
-  }
-
-  
+.content-container{
+ row-gap: 1.5vh;
+}
 }
