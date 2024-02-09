@@ -148,7 +148,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="s container s-7">
+          <div className="s s-7">
             <p>
               Thank you for being an integral part of our mission, for your
               unwavering support, and for championing the cause of our beloved

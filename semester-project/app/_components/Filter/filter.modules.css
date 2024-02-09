@@ -2,14 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1em;
+    gap: 2vw;
 }
 
 
 .btn{
-    padding: 0.5rem 2rem;
+    padding: 0.5vw 2vw;
     border-radius: 1.5rem;
-    font-size: 1.25rem;
+    font-size: 1.5vw;
     font-weight: bold;
     
 }
