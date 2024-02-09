@@ -82,19 +82,19 @@ const Navbar: FC<NavbarProps> = ({ pages, accountIcon }) => {
       }
 
       ${color && (showMenu || showAccount) ? "flex-col" : ""}
-     `}>
+     `}
+    >
       <div
-        className={`bg-transparent ${color && showMenu ? "self-center" : ""}`}>
+        className={`bg-transparent ${color && showMenu ? "self-center" : ""}`}
+      >
         <ul
-          className={`lg:flex px-2 lg:flex-row lg:bg-transparent xl:border-none 2xl:border-none  xl:bg-transparent 2xl:bg-transparent 
+          className={`lg:flex px-2 lg:flex-row lg:bg-transparent    
           ${
-            showMenu
-              ? " flex flex-col mt-14 -ml-4 border-2 bg-purple-400 border-lb lg:border-0 xl:border-0 2xl:border-0  "
-              : "hidden"
+            showMenu ? " flex flex-col mt-14 -ml-4  bg-purple-400  " : "hidden"
           } 
           ${
             showMenu && color
-              ? "  border-none bg-transparent mt-8 flex flex-col items-center text-xl"
+              ? "   bg-transparent  mt-8 flex flex-col items-center text-xl"
               : ""
           }
           lg:mt-0 lg:-ml-0`}
@@ -104,17 +104,17 @@ const Navbar: FC<NavbarProps> = ({ pages, accountIcon }) => {
                   borderRadius: "12px",
                 }
               : {}
-          }>
+          }
+        >
           {pages &&
             Object.entries(pages).map(([name, path], index) => (
               <li
                 key={name}
-                className={`
-             
-                dropdown border-b-2 border-white p-1 lg:last-of-type:border-b-2 last-of-type:border-0
-                ${color && showMenu ? "border-none  text-white " : ""}
+                className={`p-1  
+                
                
-                `}>
+                `}
+              >
                 <Link href={path}>
                   <button
                     className={`
@@ -129,7 +129,8 @@ const Navbar: FC<NavbarProps> = ({ pages, accountIcon }) => {
                     }
                     ${!showMenu ? " hover:bg-purple-600" : "hover:text-black"}
                    
-                  `}>
+                  `}
+                  >
                     {name.toUpperCase()}
                   </button>
                 </Link>
@@ -141,7 +142,8 @@ const Navbar: FC<NavbarProps> = ({ pages, accountIcon }) => {
           <button
             className={`nav-icon text-purple-400 text-5xl fixed top-3 left-14
               }`}
-            onClick={toggleMenu}>
+            onClick={toggleMenu}
+          >
             <Hamburger
               rounded
               duration={0.6}
@@ -156,7 +158,8 @@ const Navbar: FC<NavbarProps> = ({ pages, accountIcon }) => {
       <div className="flex ">
         <button
           className={"icon text-purple-400 fixed top-5 right-14  "}
-          onClick={toggleAccount}>
+          onClick={toggleAccount}
+        >
           <VscAccount size={42} />
         </button>
       </div>
@@ -165,37 +168,36 @@ const Navbar: FC<NavbarProps> = ({ pages, accountIcon }) => {
           className={`pt-3 bg-purple-400 
           ${
             showAccount
-              ? "flex flex-col mt-14 py-0 px-4 rounded-xl bg-lb border-2 border-white z-10"
+              ? "flex flex-col mt-14 py-0 px-4 rounded-xl bg-lb  z-10"
               : "hidden"
           }
           ${color && showAccount ? "  mt-8  " : ""}
          
           
           
-          `}>
+          `}
+        >
           {accountIcon &&
             Object.entries(accountIcon).map(([name, path], index) => (
               <li
                 key={name}
-                className={`dropdown border-b-2 border-white p-1 last-of-type:border-none 
+                className={`dropdown  p-1 
                   
                 ${color && showAccount ? "px-7 py-2 " : ""}
 
-                  `}>
+                  `}
+              >
                 <Link href={path}>
                   <button
                     className={`hover:text-black
-                    ${
-                      color && showAccount
-                        ? "bg-transparent border-0 p-0"
-                        : "px-8"
-                    }
+                    ${color && showAccount ? "bg-transparent p-0" : "px-8"}
                     
                     bg-purple-400
                  text-white rounded-xl py-2  text-xl font-bold
                 
 
-                 `}>
+                 `}
+                  >
                     {name}
                   </button>
                 </Link>

@@ -9,13 +9,7 @@
     align-self: flex-end;
   }
   
-  .slider-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    color: var(--blue-50);
-  }
-  
+
   .card-slider {
       position: relative;
       height: 600px;
@@ -26,13 +20,13 @@
   
   .section-container .card-container {
       display: flex;
-      gap: 28px;
+      column-gap: 2vw;
   }
   
   .right-arrow {
       position: absolute;
       top: 40%;
-      right: -100px;
+      right: -7vw;
       color:  rgb(147 51 234);
       font-size: 4rem;
       cursor: pointer;
@@ -42,7 +36,7 @@
     .left-arrow {
       position: absolute;
       top: 40%;
-      left: -100px;
+      left: -7vw;
       color: rgb(147 51 234);
       font-size: 4rem;
       cursor: pointer;
@@ -56,10 +50,7 @@
     }
   
     @media screen and (max-width: 550px) {
-      .right-arrow {
-        right: -25%;
-      }
-      .left-arrow {
-        left: -25%;
+      .left-arrow, .right-arrow{
+        z-index: -2;
       }
    }

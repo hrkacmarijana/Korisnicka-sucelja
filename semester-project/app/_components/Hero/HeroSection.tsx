@@ -53,83 +53,88 @@ export default async function HeroSection() {
   }));
   return (
     <>
-      <div id="section-1 " className=" relative text-lb">
-        <div className="background-container">
-          <Image
-            className="background-container"
-            src="/home-bg.png"
-            alt="bg-image"
-            fill={true}
-            priority
-          />
+      <div className="main">
+        <div id="section-1 " className=" relative text-lb">
+          <div className="background-container">
+            <Image
+              className="background-container"
+              src="/home-bg.png"
+              alt="bg-image"
+              fill={true}
+              priority
+            />
 
-          <div className="content-container ">
-            <Logo />
-            <h1 className=" max-w-xxl text-center font-bold">
-              Our four-legged friends need your help.
+            <div className="content-container ">
+              <Logo />
+              <h1 className=" max-w-xxl text-center font-bold">
+                Our four-legged friends need your help.
+              </h1>
+              <div className="button-container">
+                <Link
+                  href="\pets"
+                  className="button bg-purple-600 text-white  hover:bg-purple-800"
+                >
+                  FIND YOUR FRIEND
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="section-2">
+          <div className="text-cnt">
+            <h1>
+              Pets change our lives.
+              <br />
+              We are on a quest to change theirs.
             </h1>
+            <span>
+              Quest for True Paw is a nonprofit organization dedicated to
+              rescuing, fostering, and rehoming the abandoned, sick, and injured
+              animals around our city.
+              <br />
+              <br />
+              With your help, we hope to make a difference in the lives of these
+              wonderful animals.
+            </span>
             <div className="button-container">
               <Link
-                href="\pets"
+                href="\about"
                 className="button bg-purple-600 text-white  hover:bg-purple-800"
               >
-                FIND YOUR FRIEND
+                MORE ABOUT US
               </Link>
             </div>
           </div>
         </div>
-      </div>
-      <div id="section-2">
-        <div className="text-cnt">
-          <h1>
-            Pets change our lives.
-            <br />
-            We are on a quest to change theirs.
-          </h1>
-          <span>
-            Quest for True Paw is a nonprofit organization dedicated to
-            rescuing, fostering, and rehoming the abandoned, sick, and injured
-            animals around our city.
-            <br />
-            <br />
-            With your help, we hope to make a difference in the lives of these
-            wonderful animals.
-          </span>
-          <div className="button-container">
-            <Link
-              href="\about"
-              className="button bg-purple-600 text-white  hover:bg-purple-800"
-            >
-              MORE ABOUT US
-            </Link>
+        <div id="section-3" className="bg-lb  w-full ">
+          <div className="container w-full ">
+            <h1 className="heading">MEET OUR PETS</h1>
+            <div className="cards-cnt w-full ">
+              <CardSlider cards={cards} />
+            </div>
+            <div className="button-container">
+              <Link
+                href="/pets"
+                className="button bg-purple-600 text-white hover:bg-purple-800 "
+              >
+                SEE MORE PETS
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="section-3" className="section-3 bg-lb  w-full ">
-        <div className="flex flex-col items-center justify-center w-full gap-20">
-          <h1 className="text-5xl  ">Meet our pets</h1>
-          <div className="flex flex-row flex-wrap  justify-around w-full px-24 gap-10">
-            <CardSlider cards={cards} />
-          </div>
-          <div className="text-2xl">
-            <Link
-              href="/pets"
-              className="bg-purple-600 text-white rounded-2xl font-bold px-8 py-4 text-2xl hover:bg-purple-800 "
-            >
-              SEE MORE PETS
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div className="bg-image relative ">
-        <div className="bg-cnt-2">
-          <div className="section-4 ">
-            <div className="text-section flex flex-col max-w-3xl gap-20 text-center text-lb ">
-              <h1 className="text-5xl font-bold  bg-black bg-opacity-50 max-w-fit self-center">
-                How You Can Help
-              </h1>
-              <span className=" bg-black bg-opacity-50">
+        <div id="section-4">
+          <div className="bg-cnt-2">
+            <Image
+              className="background-container"
+              src="/bg2.jpg"
+              alt="bg-image"
+              fill={true}
+              priority
+            />
+            <div className="cnt-4">
+              <h1 className="font-bold">How You Can Help</h1>
+              <span>
                 There are countless ways you can help us in our quest for paws.
                 You can make a donation (however big or small), join our
                 fundraiser events, or volunteer your time and home as a foster
@@ -138,7 +143,7 @@ export default async function HeroSection() {
               <div className="button-container">
                 <Link
                   href="/donations"
-                  className="button bg-white text-purple-700 rounded-2xl font-bold px-8 py-4 text-2xl hover:bg-lb"
+                  className="button bg-purple-700  text-white hover:bg-purple-900"
                 >
                   DONATE
                 </Link>
@@ -146,20 +151,20 @@ export default async function HeroSection() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="section-5 bg-lb flex justify-center w-full py-24 px-5">
-        <div className="flex flex-col items-center justify-center w-full gap-48">
-          <h1 className="text-5xl  ">Success stories</h1>
-          <div className="flex flex-wrap justify-around w-full px-24 gap-10">
-            <CardSlider cards={stories} />
-          </div>
-          <div className="text-2xl">
-            <Link
-              href="/community"
-              className="bg-purple-600 text-white rounded-2xl font-bold px-8 py-4 text-2xl hover:bg-purple-800"
-            >
-              READ MORE
-            </Link>
+        <div id="section-5" className="bg-lb w-full">
+          <div className="container w-full">
+            <h1 className="heading">SUCCESS STORIES</h1>
+            <div className="cards-cnt w-full">
+              <CardSlider cards={stories} />
+            </div>
+            <div className="button-container">
+              <Link
+                href="/community"
+                className="button bg-purple-600 text-white  hover:bg-purple-800"
+              >
+                READ MORE
+              </Link>
+            </div>
           </div>
         </div>
       </div>
