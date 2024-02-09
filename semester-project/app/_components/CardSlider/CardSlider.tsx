@@ -27,11 +27,11 @@ const CardSlider: FC<CardSliderProps> = ({ cards }) => {
     const screenWidth = window.innerWidth;
 
     if (screenWidth <= 950) {
-      setDisplayCount(1); // small screens
+      setDisplayCount(1);
     } else if (screenWidth <= 1300) {
-      setDisplayCount(2); // medium screens
+      setDisplayCount(2);
     } else {
-      setDisplayCount(3); // larger screens
+      setDisplayCount(3);
     }
   };
 
