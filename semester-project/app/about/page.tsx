@@ -13,7 +13,7 @@ function About() {
   return (
     <>
       <div className="bg-lb ">
-        <div className="content py-40 mx-28 gap-12">
+        <div className="content">
           <div className="s section-1">
             <h1>ABOUT US</h1>
             <div className="container">
@@ -31,30 +31,18 @@ function About() {
                 commitment to rewriting stories of despair into narratives
                 brimming with joy and belonging.
               </p>
-              <div className="img-cnt i1">
-                <Image
-                  src={image1}
-                  alt="image"
-                  width={600}
-                  height={600}
-                  className="image rounded-xl ml-20 border-2 border-purple-600"
-                />
+              <div className="image-container">
+                <Image src={image1} alt="image1" fill={true} priority />
               </div>
             </div>
           </div>
-          <div className="s s-2 ">
+          <div className="s end ">
             <h2>Our story</h2>
             <div className="container rev">
-              <div className="img-cnt i1 ">
-                <Image
-                  src={image2}
-                  alt="image"
-                  width={600}
-                  height={600}
-                  className="image rounded-xl mr-20 border-2 border-purple-600 "
-                />
+              <div className="image-container">
+                <Image src={image2} alt="image2" fill={true} priority />
               </div>
-              <p className="ml-24">
+              <p>
                 True Paw Shelter was born from a collective passion for animal
                 welfare. It began with a small group of dedicated individuals
                 who recognized the dire need to address the plight of abandoned,
@@ -68,7 +56,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="s s-3">
+          <div className="s">
             <h2>Our Mission</h2>
             <div className="container">
               <p>
@@ -91,30 +79,19 @@ function About() {
                 compassion and respect.
                 <br />
               </p>
-              <div className="img-cnt i2 ">
-                <Image
-                  src={image3}
-                  alt="image"
-                  width={400}
-                  height={400}
-                  className="image rounded-xl ml-20 border-2 border-purple-600"
-                />
+
+              <div className="image-container">
+                <Image src={image3} alt="image3" fill={true} priority />
               </div>
             </div>
           </div>
-          <div className="s s-4">
+          <div className="s end">
             <h2>Making a Difference, One Paw at a Time </h2>
-            <div className="container rev">
-              <div className="img-cnt i3 ">
-                <Image
-                  src={image4}
-                  alt="image"
-                  width={400}
-                  height={400}
-                  className="image rounded-xl mr-20 border-2 border-purple-600"
-                />
+            <div className="container  s47">
+              <div className="image-container i4">
+                <Image src={image4} alt="image4" fill={true} priority />
               </div>
-              <p className="ml-12">
+              <p>
                 Each day at True Paw Shelter is filled with stories of triumph,
                 where the resilience of animals shines brightly. From the
                 tiniest kitten to the gentlest senior dog, we are dedicated to
@@ -131,7 +108,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="s s-5">
+          <div className="s">
             <h2>Our Promise</h2>
             <div className="container">
               <p>
@@ -145,30 +122,19 @@ function About() {
                 welcomed into our fold with open arms, cradled in the assurance
                 of a hopeful journey ahead.
               </p>
-              <div className="img-cnt i1">
-                <Image
-                  src={image5}
-                  alt="image"
-                  width={600}
-                  height={600}
-                  className="image rounded-xl ml-20 border-2 border-purple-600"
-                />
+              <div className="image-container">
+                <Image src={image5} alt="image5" fill={true} priority />
               </div>
             </div>
           </div>
-          <div className="s s-6">
+          <div className="s end">
             <h2>Join Our Cause</h2>
-            <div className="container rev">
-              <div className=" img-cnt i1">
-                <Image
-                  src={image6}
-                  alt="image"
-                  width={600}
-                  height={600}
-                  className="image rounded-xl mr-20 border-2 border-purple-600"
-                />
+            <div className="container  s47">
+              <div className="image-container">
+                <Image src={image6} alt="image6" fill={true} priority />
               </div>
-              <p className="ml-12 mb-24">
+
+              <p>
                 We invite you to be part of our journey. Whether you choose to
                 volunteer, donate, adopt, or simply spread the word about our
                 mission, your support makes a world of difference. Together, we
@@ -182,7 +148,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="s s-7">
+          <div className="s container s-7">
             <p>
               Thank you for being an integral part of our mission, for your
               unwavering support, and for championing the cause of our beloved
