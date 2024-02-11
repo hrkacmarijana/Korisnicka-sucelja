@@ -59,38 +59,36 @@ export default function Donations() {
           <Image src={image5} alt="image4" fill={true} priority />
         </div>
 
-        <div className="">
-          <form
-            className="form-container"
-            action="/submit-donation"
-            method="post"
-          >
-            <div className="form-group">
-              <label>Full Name</label>
-              <input type="text" name="name" required />
-            </div>
-            <div className="form-group">
-              <label>Email Address</label>
-              <input type="email" name="email" required />
-            </div>
-            <div className="form-group">
-              <label>Donation Amount</label>
-              <input type="number" name="amount" min="1" required />
-            </div>
-            <div className="form-group">
-              <label>Message (optional)</label>
-              <textarea name="message" rows={2}></textarea>
-            </div>
-            <div className="button-container">
-              <Link
-                href="/"
-                className="button bg-purple-600 text-white  hover:bg-purple-800"
-              >
-                DONATE
-              </Link>
-            </div>
-          </form>
-        </div>
+        <form
+          className="form-container"
+          action="/submit-donation"
+          method="post"
+        >
+          <div className="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div className="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" required />
+          </div>
+          <div className="form-group">
+            <label>Donation Amount</label>
+            <input type="number" name="amount" min="1" required />
+          </div>
+          <div className="form-group">
+            <label>Message (optional)</label>
+            <textarea name="message" rows={2}></textarea>
+          </div>
+          <div className="button-container">
+            <Link
+              href="/"
+              className="button bg-purple-600 text-white  hover:bg-purple-800"
+            >
+              DONATE
+            </Link>
+          </div>
+        </form>
       </div>
     </>
   );

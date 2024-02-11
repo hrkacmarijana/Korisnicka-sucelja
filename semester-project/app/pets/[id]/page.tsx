@@ -23,7 +23,7 @@ async function Animal({ params }: { params: Params }) {
   return (
     <>
       {animal && (
-        <div className="animal">
+        <div className="animal bg-purple-200">
           <div className="banner">
             <Image
               className="animal-img animal-main-img"
@@ -55,7 +55,7 @@ async function Animal({ params }: { params: Params }) {
           </div>
           <h1>{animal.name}</h1>
 
-          <div className="animal-info">
+          <div className="animal-info bg-purple-200">
             {documentToReactComponents(animal.details)}
           </div>
         </div>

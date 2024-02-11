@@ -12,7 +12,7 @@ import image6 from "public/image6.jpg";
 function About() {
   return (
     <>
-      <div className="bg-lb ">
+      <div className="cnt bg-purple-200 ">
         <div className="content">
           <div className="s section-1">
             <h1>ABOUT US</h1>

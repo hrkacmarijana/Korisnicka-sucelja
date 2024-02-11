@@ -13,7 +13,7 @@ async function AboutUs() {
   const animals = await contentfulService.getAllAnimals();
 
   return (
-    <div className="pets bg-purple-200">
+    <div className="pets">
       <div className="text-section">
         <h1>ADOPTABLE PETS</h1>
         <p className="text-justify">
