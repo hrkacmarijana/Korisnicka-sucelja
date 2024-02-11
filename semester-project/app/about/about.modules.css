@@ -1,5 +1,4 @@
 
-
 .image-container{
     position: relative;
     width: 44vw;
@@ -23,6 +22,11 @@
  h1{
     font-size: 5vw;
     font-weight: bold;
+
+}
+
+h1, h2{
+    color: purple;
 }
 
 .s{
@@ -136,6 +140,22 @@ align-items: center;
     .i4{
         height: 80vw;
     }
+
+    
+h2{
+    font-size: 8vw;
+}
+h1{font-size: 10vw;}
+
+.s{
+    row-gap: 5vw;
+}
+
+.cnt{
+    padding: 5vw 0;
+
+}
+
 
     
     

@@ -53,7 +53,7 @@ export default async function HeroSection() {
   return (
     <>
       <div className="main">
-        <div id="section-1 " className=" relative text-lb">
+        <div id="section-1 " className=" relative text-white">
           <div className="background-container">
             <Image
               className="background-container"
@@ -79,7 +79,7 @@ export default async function HeroSection() {
             </div>
           </div>
         </div>
-        <div id="section-2">
+        <div id="section-2" className="section ">
           <div className="text-cnt">
             <h1>
               Pets change our lives.
@@ -105,7 +105,7 @@ export default async function HeroSection() {
             </div>
           </div>
         </div>
-        <div id="section-3" className="bg-lb  w-full ">
+        <div id="section-3" className="section  bg-purple-200 w-full ">
           <div className="container w-full ">
             <h1 className="heading">MEET OUR PETS</h1>
             <div className="cards-cnt w-full ">
@@ -150,7 +150,7 @@ export default async function HeroSection() {
             </div>
           </div>
         </div>
-        <div id="section-5" className="bg-lb w-full">
+        <div id="section-5" className="section bg-purple-200 w-full">
           <div className="container w-full">
             <h1 className="heading">SUCCESS STORIES</h1>
             <div className="cards-cnt w-full">

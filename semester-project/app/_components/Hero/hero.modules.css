@@ -140,6 +140,10 @@ background-repeat: no-repeat;
   justify-content: center;
 }
 
+.section{
+  padding: 5vw 0;
+}
+
 
 
 
@@ -192,6 +196,9 @@ padding: 0.7vh 3vw;
 }
 
 @media (max-width: 500px) {
+  .background-container .content-container .button{
+    font-size: 4vw;
+  }
   .background-container {
     height: 35vh;
  }
@@ -210,7 +217,8 @@ padding: 0.7vh 3vw;
     
 
     .button{
-      font-size: 4vw;
+      font-size: 6vw;
+      padding: 3vw 4vw;
       
       }
 
