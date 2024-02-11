@@ -1,3 +1,5 @@
+
+
 .image-container{
     position: relative;
     width: 44vw;
@@ -14,20 +16,20 @@
     flex-direction: column;
     padding: 10vw 4vw;
     row-gap: 3vw;
-    align-items: center;
+    text-align: justify;
 
 }
 
-.content h1{
+ h1{
     font-size: 5vw;
     font-weight: bold;
 }
 
 .s{
     display: flex;
-    flex-direction: column;
-   
-  
+    flex-wrap: wrap;
+    text-align: justify;
+
 }
 
 .container{
@@ -46,7 +48,6 @@ h2{
     font-size: 3vw;
     font-weight: bold;
     text-transform: uppercase;
-
 }
 
 p{
@@ -59,6 +60,22 @@ p{
 align-items: center;
 }
 
+.s-7{
+    width: 100%;
+    align-self: center;
+}
+
+
+@media (max-width: 1200px) {
+    p{
+        font-size: 2.5vw;
+        text-align:justify
+    }
+
+    h2{
+        font-size: 4vw;
+    }
+}
 
 @media (max-width: 768px) {
     .container{
@@ -75,6 +92,7 @@ align-items: center;
 
     .s{
         align-items: center;
+        justify-content: center;
     }
 
     .content{
@@ -88,13 +106,37 @@ align-items: center;
        
     }
     h2{
-        font-size: 4vw;}
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 8vw;
+    }
+    .s-7{
+        width: 80%;
+    }
+
+   
 }
 
-@media (max-width: 768px){
+@media (max-width: 500px){
     .content{
         padding: 20vw 4vw;
+        align-items: center;
+
 
     }
 
+    p{
+        font-size: 4vw;
+        text-align:justify
+    }
+
+    .i4{
+        height: 80vw;
+    }
+
+    
+    
 }

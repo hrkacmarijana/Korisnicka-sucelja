@@ -16,7 +16,6 @@ const pages: Record<string, `/${string}`> = {
   About: "/about",
   Pets: "/pets",
   Donations: "/donations",
-  Community: "/community",
   Blog: "/blog",
 };
 

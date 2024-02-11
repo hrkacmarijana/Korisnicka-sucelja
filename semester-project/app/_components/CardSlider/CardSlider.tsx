@@ -14,6 +14,7 @@ const CardSlider: FC<CardSliderProps> = ({ cards }) => {
   const [currentCards, setCurrentCards] = useState([0, 1, 2]);
   const [displayCount, setDisplayCount] = useState(3);
   const length = cards.length;
+  const move = 1;
 
   useEffect(() => {
     updateDisplayCount();
@@ -41,8 +42,8 @@ const CardSlider: FC<CardSliderProps> = ({ cards }) => {
 
   const shiftArray = (arr: number[], shiftAmount: number) => {
     const shiftedArray = arr.map((index) => {
-      let shiftedIndex = (index + shiftAmount) % length;
-      shiftedIndex = shiftedIndex < 0 ? length + shiftedIndex : shiftedIndex;
+      let shiftedIndex = (index + move) % length;
+      shiftedIndex = shiftedIndex < 0 ? length + move : shiftedIndex;
 
       return shiftedIndex;
     });

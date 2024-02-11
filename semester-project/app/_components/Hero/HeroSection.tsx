@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 import Image from "next/image";
-import Card from "@/app/_components/Card/Card";
 import Link from "next/link";
 import "./hero.modules.css";
 import CardSlider from "../CardSlider/CardSlider";
@@ -134,7 +133,7 @@ export default async function HeroSection() {
             />
             <div className="cnt-4">
               <h1 className="font-bold">How You Can Help</h1>
-              <span>
+              <span className="text-justify">
                 There are countless ways you can help us in our quest for paws.
                 You can make a donation (however big or small), join our
                 fundraiser events, or volunteer your time and home as a foster

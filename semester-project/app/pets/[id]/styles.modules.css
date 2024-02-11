@@ -1,0 +1,76 @@
+
+
+
+.image-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.animal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vw 10vw;
+}
+
+.banner{
+    display: flex;
+    gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1{
+    padding: 3vw 0;
+    font-size: 5vw;
+    font-weight: bold;
+}
+
+.animal-img{
+    border-radius: 30px;
+}
+
+.animal-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+    gap: 2vw;
+}
+
+.animal-info h2{
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+.animal-info h3{
+    font-weight: 500;
+    font-size: 3vw;
+}
+
+hr{
+    color: purple;
+}
+
+
+
+
+@media screen and (max-width: 550px) {
+    h1{
+        font-size: 10vw;
+    }
+    .animal-main-img {
+        width: 350px;
+        height: auto;
+    }
+    .animal-info {
+      
+        font-size: 5vw;
+    }
+
+    .animal-info h2, h3{
+      
+        font-size: 7vw;
+    }
+    
+}
+

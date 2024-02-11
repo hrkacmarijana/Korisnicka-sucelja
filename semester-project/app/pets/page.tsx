@@ -13,10 +13,10 @@ async function AboutUs() {
   const animals = await contentfulService.getAllAnimals();
 
   return (
-    <div className="pets">
+    <div className="pets bg-purple-200">
       <div className="text-section">
         <h1>ADOPTABLE PETS</h1>
-        <p>
+        <p className="text-justify">
           Welcome to our Pets section, a heartwarming space where you can
           explore a delightful array of adoptable companions eagerly awaiting
           their forever homes. From playful cats to loyal dogs and charming

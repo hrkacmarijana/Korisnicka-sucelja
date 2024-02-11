@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
+
+.background-container{
+    position: relative;
+   height: 100vh;
+   z-index: -1;
+  
+  }
+
+.button-container{
+    font-size: 1vh;
+    padding-top: 2vw;
+    transition: transform 0.3s ease-in-out;
+   
+   }
+
+.button:hover {
+    transform: scale(1.05);
+}
+   
+.button{
+   
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 1vw 3vw;
+    font-size: 2.5vw;
+   
+} 
+
+.text{
+    font-family: "Protest Strike", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20%;
+    padding-left: 5vw;
+    row-gap: 2vw;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+
+
+.text .p1{
+    font-size: 6vw;
+}
