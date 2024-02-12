@@ -1,11 +1,9 @@
-require("dotenv").config();
-
 import Image from "next/image";
-import Link from "next/link";
 import "./hero.modules.css";
 import CardSlider from "../CardSlider/CardSlider";
 import Logo from "@/components/Logo/Logo";
 import contentfulService from "@/app/lib/contentfulClient";
+import Button from "../Button/Button";
 
 const card2 = [
   {
@@ -65,23 +63,16 @@ export default async function HeroSection() {
 
             <div className="content-container ">
               <Logo />
-              <h1 className=" max-w-xxl text-center font-bold">
+              <h1 className=" max-w-xxl text-center font-bold ">
                 Our four-legged friends need your help.
               </h1>
-              <div className="button-container">
-                <Link
-                  href="\pets"
-                  className="button bg-purple-600 text-white  hover:bg-purple-800"
-                >
-                  FIND YOUR FRIEND
-                </Link>
-              </div>
+              <Button textHolder="find your friend" href="/pets"></Button>
             </div>
           </div>
         </div>
         <div id="section-2" className="section ">
-          <div className="text-cnt">
-            <h1>
+          <div className="text-cnt ">
+            <h1 className=" font-bold">
               Pets change our lives.
               <br />
               We are on a quest to change theirs.
@@ -96,12 +87,7 @@ export default async function HeroSection() {
               wonderful animals.
             </span>
             <div className="button-container">
-              <Link
-                href="\about"
-                className="button bg-purple-600 text-white  hover:bg-purple-800"
-              >
-                MORE ABOUT US
-              </Link>
+              <Button textHolder="more about us" href="/about" />
             </div>
           </div>
         </div>
@@ -111,14 +97,7 @@ export default async function HeroSection() {
             <div className="cards-cnt w-full ">
               <CardSlider cards={cards} />
             </div>
-            <div className="button-container">
-              <Link
-                href="/pets"
-                className="button bg-purple-600 text-white hover:bg-purple-800 "
-              >
-                SEE MORE PETS
-              </Link>
-            </div>
+            <Button textHolder="see more pets" href="/pets"></Button>
           </div>
         </div>
 
@@ -139,14 +118,7 @@ export default async function HeroSection() {
                 fundraiser events, or volunteer your time and home as a foster
                 parent.
               </span>
-              <div className="button-container">
-                <Link
-                  href="/donations"
-                  className="button bg-purple-700  text-white hover:bg-purple-900"
-                >
-                  DONATE
-                </Link>
-              </div>
+              <Button textHolder="donate" href="/pets"></Button>
             </div>
           </div>
         </div>
@@ -156,14 +128,7 @@ export default async function HeroSection() {
             <div className="cards-cnt w-full">
               <CardSlider cards={stories} />
             </div>
-            <div className="button-container">
-              <Link
-                href="/community"
-                className="button bg-purple-600 text-white  hover:bg-purple-800"
-              >
-                READ MORE
-              </Link>
-            </div>
+            <Button textHolder="read more" href="/pets"></Button>
           </div>
         </div>
       </div>

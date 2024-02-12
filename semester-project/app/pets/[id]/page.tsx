@@ -3,6 +3,7 @@ import Image from "next/image";
 import "./styles.modules.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import contentfulService from "@/app/lib/contentfulClient";
+import Link from "next/link";
 
 const metadata: Metadata = {
   title: "About Us",
@@ -57,6 +58,15 @@ async function Animal({ params }: { params: Params }) {
 
           <div className="animal-info bg-purple-200">
             {documentToReactComponents(animal.details)}
+          </div>
+
+          <div className="button-container">
+            <Link
+              href="/community"
+              className="button bg-purple-600 text-white  hover:bg-purple-800"
+            >
+              ADOPT ME
+            </Link>
           </div>
         </div>
       )}
