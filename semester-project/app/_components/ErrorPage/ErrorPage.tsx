@@ -18,7 +18,7 @@ const ErrorPage = () => {
           <p>Oops! I may have chewed up the power cord.</p>
           <p>Go back to our mainpage to continue your visit.</p>
           <div className="button-container">
-            <Link href="\pets" className="button bg-black text-white  ">
+            <Link href="\" className="button bg-black text-white  ">
               Back to main page
             </Link>{" "}
           </div>

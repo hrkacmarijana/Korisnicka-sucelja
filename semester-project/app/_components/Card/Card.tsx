@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import "./styles.modules.css";
 
 export interface cardProps {
   id: string;

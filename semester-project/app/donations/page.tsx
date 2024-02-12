@@ -7,6 +7,7 @@ import image2 from "public/dnt2.jpg";
 import image3 from "public/dnt3.jpg";
 import image5 from "public/donation.png";
 import Image from "next/image";
+import Button from "../_components/Button/Button";
 
 let imageRatio = image1.width / image1.height;
 
@@ -80,14 +81,7 @@ export default function Donations() {
             <label>Message (optional)</label>
             <textarea name="message" rows={2}></textarea>
           </div>
-          <div className="button-container">
-            <Link
-              href="/"
-              className="button bg-purple-600 text-white  hover:bg-purple-800"
-            >
-              DONATE
-            </Link>
-          </div>
+          <Button textHolder="donate" href="/thankyou" />
         </form>
       </div>
     </>

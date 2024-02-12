@@ -2,13 +2,17 @@
 
 .background-container{
     position: relative;
-   height: 100vh;
-   z-index: -1;
+   height: 70vw;
+  
+  }
+
+  .background-container img{
+ 
+   z-index: -5;
   
   }
 
 .button-container{
-    font-size: 1vh;
     padding-top: 2vw;
     transition: transform 0.3s ease-in-out;
    
@@ -28,6 +32,7 @@
 } 
 
 .text{
+
     font-family: "Protest Strike", sans-serif;
     display: flex;
     flex-direction: column;
@@ -43,4 +48,40 @@
 
 .text .p1{
     font-size: 6vw;
+}
+
+@media (max-width: 800px) {
+    .text{
+        padding:  31% 10vw ;
+        
+    }
+
+}
+
+@media (max-width: 500px) {
+    .text{
+        padding-left: 20vw;
+    }
+    
+.text{
+    
+    font-size: 3.5vw;
+
+}
+
+.button{
+   
+
+    font-size: 4vw;
+   
+} 
+
+
+
+.text .p1{
+    font-size: 8vw;
+}
+
+
+    
 }
