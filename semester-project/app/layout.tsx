@@ -19,8 +19,8 @@ const pages: Record<string, `/${string}`> = {
 };
 
 const accountIcon: Record<string, `/${string}`> = {
-  SignUp: "/",
-  LogIn: "/",
+  SignUp: "/signUp",
+  LogIn: "/logIn",
   Account: "/account",
 };
 

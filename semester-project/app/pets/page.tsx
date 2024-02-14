@@ -6,10 +6,10 @@ import contentfulService from "../lib/contentfulClient";
 import FilterAnimals from "@/app/_components/FilterAnimals/FilterAnimals";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "Pets",
 };
 
-async function AboutUs() {
+async function Pets() {
   const animals = await contentfulService.getAllAnimals();
 
   return (
@@ -38,4 +38,4 @@ async function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default Pets;

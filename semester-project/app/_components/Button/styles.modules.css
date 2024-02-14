@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
 
 .button-container{
     font-size: 1vh;
     padding-top: 2vw;
     transition: transform 0.3s ease-in-out;
-   
+   font-family: "Protest Strike", sans-serif;
+
    }
    
    .button{
-    background-color: purple;
-   
+  
     color: white;
     font-size: 2vw;
     font-weight: bold;

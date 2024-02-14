@@ -5,48 +5,25 @@ import Logo from "@/components/Logo/Logo";
 import contentfulService from "@/app/lib/contentfulClient";
 import Button from "../Button/Button";
 
-const card2 = [
-  {
-    id: "story1",
-    imageUrl: "/story1.png",
-    name: "Rachel and Luna",
-    text: "In the quiet shelter, Luna, a playful pup with soulful eyes, caught Rachels heart instantly. Despite Lunas troubled past, Rachels patient love and unwavering commitment transformed Luna into a beacon of joy, proving that in each other, they found their forever home.",
-    species: "cat",
-  },
-
-  {
-    id: "story2",
-    imageUrl: "/story2.png",
-    name: "Max and Bailey",
-    text: "Amidst the bustling city, Max met Bailey, a scrappy dog with a heart full of loyalty, forming an unbreakable bond that weathered life storms together, proving that sometimes, the best adventures come with a wagging tail by your side.",
-    species: "cat",
-  },
-
-  {
-    id: "story3",
-    imageUrl: "/story3.png",
-    name: "Claire and Mia",
-    text: "In a quaint corner of town, Claire encountered Mia, a graceful feline with an air of mystery, and their shared moments of quiet understanding and playful antics painted a portrait of a friendship that spoke volumes without a single meow uttered.",
-    species: "cat",
-  },
-];
-
 export default async function HeroSection() {
   const animals = await contentfulService.getAllAnimals();
+  const allStories = await contentfulService.getAllStories();
+
   const cards = animals.map((animal) => ({
     id: animal.id,
     imageUrl: animal.featuredImage.url,
     name: animal.name,
     text: animal.description,
     species: animal.species,
+    page: "pets",
   }));
 
-  const stories = card2.map((story) => ({
+  const stories = allStories.map((story) => ({
     id: story.id,
-    name: story.name,
-    text: story.text,
-    imageUrl: story.imageUrl,
-    species: "cat",
+    name: story.title,
+    text: story.intro,
+    imageUrl: story.image.url,
+    page: "blog",
   }));
   return (
     <>
@@ -118,7 +95,7 @@ export default async function HeroSection() {
                 fundraiser events, or volunteer your time and home as a foster
                 parent.
               </span>
-              <Button textHolder="donate" href="/pets"></Button>
+              <Button textHolder="donate" href="/donations"></Button>
             </div>
           </div>
         </div>
@@ -128,7 +105,7 @@ export default async function HeroSection() {
             <div className="cards-cnt w-full">
               <CardSlider cards={stories} />
             </div>
-            <Button textHolder="read more" href="/pets"></Button>
+            <Button textHolder="read more" href="/blog"></Button>
           </div>
         </div>
       </div>

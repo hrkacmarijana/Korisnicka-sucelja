@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import "./footer.modules.css";
 import { FC } from "react";
 import {
   FaInstagram,
@@ -53,7 +54,7 @@ const Footer: FC<footerProps> = ({ pages }) => {
           </div>
         </div>
         <div className="col3">
-          <ul className="flex flex-col gap-2 pt-20">
+          <ul className="flex flex-col gap-2 pt-20 font-bold">
             {pages &&
               Object.entries(pages).map(([name, path], index) => (
                 <li key={name}>

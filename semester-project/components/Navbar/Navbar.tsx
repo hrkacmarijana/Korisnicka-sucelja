@@ -5,6 +5,7 @@ import { VscAccount } from "react-icons/vsc";
 import Hamburger from "hamburger-react";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import "./navbar.modules.css";
 
 interface NavbarProps {
   pages: Record<string, `/${string}`>;
@@ -78,7 +79,9 @@ const Navbar: FC<NavbarProps> = ({ pages, accountIcon }) => {
     <nav
       id="navigation"
       className={` flex justify-between py-10 lg:py-3 xl:py-3 2xl:py-3 text-lg  px-14 text-lb fixed top-0 left-0 right-0 opacity-100 z-10 ${
-        color ? "bg-mb bg-opacity-96 transition duration-500 ease-in-out" : ""
+        color
+          ? "bg-purple-100 bg-opacity-96 transition duration-500 ease-in-out"
+          : ""
       }
 
       ${color && (showMenu || showAccount) ? "flex-col" : ""}
@@ -94,7 +97,7 @@ const Navbar: FC<NavbarProps> = ({ pages, accountIcon }) => {
           } 
           ${
             showMenu && color
-              ? "   bg-transparent  mt-8 flex flex-col items-center text-xl"
+              ? "   bg-transparent  mt-8 flex flex-col items-center text-xxl"
               : ""
           }
           lg:mt-0 lg:-ml-0`}

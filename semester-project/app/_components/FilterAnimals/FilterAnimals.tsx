@@ -41,6 +41,7 @@ const Cards: FC<CardsProps> = ({ animals }) => {
                   text={animal.description}
                   species={animal.species}
                   imageUrl={animal.featuredImage.url}
+                  page="pets"
                 />
               </div>
             ))}

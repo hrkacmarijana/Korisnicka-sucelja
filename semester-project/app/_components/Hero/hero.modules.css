@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
-
 
 html, body {
   overflow-x: hidden;
+
+
+}
+
+.main{
   font-family: "Protest Strike", sans-serif;
 
 }
@@ -15,18 +18,13 @@ html, body {
 
 }
 
-#section-2 h1{
-  color: black;
-}
 
 
-
-h1{
-  color: purple;
-}
 
 .bg-cnt-2 span{
 text-transform: none;
+line-height: 3rem;
+
 }
 
 
@@ -46,6 +44,13 @@ z-index: 2;
  
 }
 
+
+.cnt-4{
+  text-align:start;
+  left: 35%;
+
+}
+
 .cnt-4 {
   color: black;
   row-gap: 5vw;
@@ -54,10 +59,13 @@ z-index: 2;
 .cnt-4 h1{
   font-size: 5vw;
   color: purple;
+  align-self: flex-start;
 }
 .cnt-4 span{
 font-size: 2.5vw;
-font-weight: 600;
+font-weight: 400;
+line-height: 3rem;
+
 }
 
 .content-container h1 {
@@ -74,7 +82,8 @@ font-weight: 600;
  }
 
  #section-2 h1{
-  color: purple;
+  color: black;
+
  }
 
 
@@ -91,12 +100,11 @@ text-align: center;
 display: flex;
 flex-direction: column;
 row-gap: 5vh;
-font-weight: 600;
+font-weight: 400;
 }
 
 .text-cnt h1{
 font-size: 3vw;
-color: purple;
 }
 
 
@@ -148,6 +156,10 @@ background-repeat: no-repeat;
 
 .section{
   padding: 5vw 0;
+}
+
+.section h1{
+  color: purple;
 }
 
 
@@ -208,6 +220,12 @@ background-repeat: no-repeat;
     font-size: 8vw;
     }
 
+  
+
+    .content-container h1{
+      font-size: 4vw;
+    }
+
     .text-cnt span{
       font-size: 4vw;
       }
@@ -222,6 +240,9 @@ background-repeat: no-repeat;
 
       .cnt-4{
         width: 80%;
+        text-align:start;
+        left: 50%;
+        text-align: center;
         
       }
 

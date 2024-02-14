@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
+
+
+
+.cnt{
+    margin: 5vw;
+    border-radius: 100px;
+    font-family: "Protest Strike", sans-serif;
+
+}
+
+
+.image-container{
+    position: relative;
+    width: 37vw;
+    height: 34vw;
+    z-index: 1;
+}
+
+
+
+.animal-info{
+    display: flex;
+    justify-content: space-around;
+    column-gap: 5vw;
+    padding: 5vw 0;
+}
+
+.animal-info h3{
+    font-size: 4vw;
+    font-weight: 500;
+    align-self: center;
+    color: purple;
+}
+
+.animal-info img{
+    border-radius: 30px;
+}
+
+.adoption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw 1vw;
+
+}
+
+.adoption h1{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: purple;
+}
+
+
+.form-container{
+    color: purple;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    border-radius: 20px;
+    row-gap: 2vw;
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    font-weight: 500;
+}
+
+.form-container h2{
+    font-size: 4vw;
+    margin-bottom: 5vw;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+input, textarea{
+    margin-left: 2vw;
+    border-bottom: 2px solid purple;
+    padding: 1vw 3vw;
+    border-radius: 20px;
+ 
+}
+
+
+
+.button{
+    font-size: 3.5vw;
+    padding: 0.7vh 3vw;
+    border-radius: 20px;
+    font-weight: 500;
+    align-self: center;
+   
+    }
+
+@media (max-width: 600px){
+    .adoption{
+
+    padding-top: 10vw;
+    }
+
+    .adoption h1{
+        font-size: 7vw;
+    }
+.form-container{
+    width: 80%;
+}
+    
+.form-container h2{
+    font-size: 5vw;
+  
+}
+
+
+.form-container{
+   
+    font-size: 3.35vw;
+}
+
+
+.button{
+    font-size: 5vw;
+    padding: 2.5vw 4vw;
+    border-radius: 6vw;
+    font-weight: bold;
+
+   
+   
+    }
+
+
+}
