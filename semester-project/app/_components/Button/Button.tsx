@@ -11,7 +11,7 @@ interface ButtonProps {
 const Button: FC<ButtonProps> = ({ textHolder, href }) => {
   return (
     <div className="button-container">
-      <Link href={href} className="button hover:bg-purple-900">
+      <Link href={href} className="button bg-purple-600 hover:bg-purple-900">
         <button>{textHolder.toUpperCase()}</button>
       </Link>
     </div>

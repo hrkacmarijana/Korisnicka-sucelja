@@ -1,35 +1,50 @@
-import Link from "next/link";
+import { Metadata } from "next";
+import Card from "../_components/Card/Card";
+import "./blog.modules.css";
+import { useState } from "react";
+import contentfulService from "../lib/contentfulClient";
+import FilterAnimals from "@/app/_components/FilterAnimals/FilterAnimals";
+import Cards from "@/app/_components/FilterAnimals/FilterAnimals";
+import CardSlider from "../_components/CardSlider/CardSlider";
 
-export interface Post {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
-
-const BASE_API_URL = "https://jsonplaceholder.typicode.com";
-
-const getPosts = async (): Promise<Post[]> => {
-  const data = await fetch(`${BASE_API_URL}/posts`);
-  return data.json();
+export const metadata: Metadata = {
+  title: "Blog",
 };
 
-export default async function Blog() {
-  const posts = await getPosts();
+async function Blog() {
+  const stories = await contentfulService.getAllStories();
+
   return (
-    <main className="flex flex-col items-center min-h-screen max-w-5xl m-auto p-10">
-      <h1 className="text-5xl font-bold pt-32 pb-16 ">BLOG</h1>
-      <ul className="flex flex-col gap-8">
-        {posts.map((post) => (
-          <li key={post.id}>
-            <Link href={`blog/${post.id}`}>
-              <span className="text-2xl text-blue-600 underline ">
-                Post {post.title}
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </main>
+    <div className="blog bg-purple-200">
+      <div className="text-section">
+        <h1>
+          Joyful Journeys <br /> Heartwarming Tales of Love and Friendship
+        </h1>
+        <p>
+          Welcome to Joyful Journeys – a collection of heartwarming tales filled
+          with love, friendship, and the magic of companionship. Join us as we
+          embark on delightful adventures, where every story is a testament to
+          the joy that animals bring into our lives. Get ready to be inspired
+          and uplifted by the power of unconditional love and the bond between
+          humans and their furry friends.
+        </p>
+      </div>
+      <div className="stories-section">
+        {stories &&
+          stories.map((story) => (
+            <div key={story.id}>
+              <Card
+                id={story.id}
+                name={story.title}
+                text={story.intro}
+                imageUrl={story.image.url}
+                page={`blog`}
+              />
+            </div>
+          ))}
+      </div>
+    </div>
   );
 }
+
+export default Blog;

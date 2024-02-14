@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
+
+
+.page{
+    margin: 5vw;
+    border-radius: 100px;
+    font-family: "Protest Strike", sans-serif;
+
+}
+
+.login-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw 0vw;
+    
+  
+}
+
+
+
+
+.login-page h2{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: purple;
+}
+
+.image-container{
+    position: relative;
+    width: 25vw;
+    height: 20vw;
+    z-index: 1;
+}
+
+.image-container img{
+    border-radius: 30px;
+}
+
+
+.cnt{
+    color: purple;
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    row-gap: 3vw;
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container label{
+    font-size: 2vw;
+    margin-bottom: 5vw;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+input{
+    margin-left: 2vw;
+    border-bottom: 2px solid purple;
+    padding: 1vw 3vw;
+    border-radius: 20px;
+ 
+}
+
+
+
+
+
+.button{
+    font-size: 3vw;
+    padding: 0.7vh 3vw;
+    border-radius: 30px;
+    font-weight: 500;
+    align-self: center;
+   
+    }
+
+    
+@media (max-width: 600px){
+    .login-page{
+
+    padding-top: 10vw;
+    }
+
+    .login-page h1{
+        font-size: 7vw;
+    }
+
+    .cnt{
+        font-size: 4vw;
+    }
+
+
+    
+
+
+
+
+
+.button{
+    font-size: 5vw;
+    padding: 2.5vw 4vw;
+    border-radius: 6vw;
+    font-weight: bold;
+
+   
+   
+    }
+
+  
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+        font-size: 3.35vw;
+
+    }
+
+    .image-container{
+        width: 55vw;
+     height: 50vw;   
+    }
+
+}

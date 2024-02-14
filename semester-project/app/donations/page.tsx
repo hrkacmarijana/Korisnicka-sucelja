@@ -81,7 +81,9 @@ export default function Donations() {
             <label>Message (optional)</label>
             <textarea name="message" rows={2}></textarea>
           </div>
-          <Button textHolder="donate" href="/thankyou" />
+          <div className="button">
+            <Button textHolder="donate" href="/thankyou" />
+          </div>
         </form>
       </div>
     </>

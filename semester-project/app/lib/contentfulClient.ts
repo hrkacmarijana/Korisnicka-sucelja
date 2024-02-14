@@ -267,7 +267,112 @@ const getAllAnimalTypes = async (): Promise<AnimalTypes[]> => {
   }
 };
 
-const getAllHeroSections= async (): Promise<TypeHeroSectionListItem[]>=> {
+
+//----------------------------------Story----------------------------------------
+
+const getAllStoriesQuery = `query StoriesList {
+  storiesCollection {
+    items {
+      sys {
+        id
+      }
+      title
+      intro
+      image {
+        url
+        height
+        width
+      }
+      
+    }
+  }
+}`;
+
+const getStoriesByIdQuery = `query GetStoriesById($id: String!) {
+  stories(id: $id) {
+    sys {
+      id
+    }
+    title
+    image {
+      url
+      height
+      width
+    }
+    intro
+  
+    text {
+      json
+    }
+  }
+}`;
+
+interface StoriesCollectionResponse {
+  storiesCollection: {
+    items: Story[];
+  }
+}
+
+interface Story {
+  sys: {
+    id: string;
+  };
+  title: string;
+  intro: string;
+text: string;
+  image: Image;
+}
+
+
+interface DetailStoriesResponse {
+    stories: {
+      sys: {
+        id: string;
+      };
+      text: {
+        json: {
+          data: {};
+          content: {
+            data: {};
+            content: {
+              data: {};
+              marks: {
+                type: string;
+              }[];
+              value: string;
+              nodeType: string;
+            }[];
+            nodeType: string;
+          }[];
+          nodeType: string;
+        };
+      };
+      title: string;
+      image: Image;
+      
+intro: string    };
+}
+
+
+interface TypeStoriesDetailItem extends TypeStoriesListItem {
+  text: any;
+}
+
+export interface TypeStoriesListItem {
+  id: string;
+  title: string;
+  text: string;
+  intro: string;
+
+  image: Image;
+}
+
+
+
+
+
+
+const getAllStories = async (): Promise<TypeStoriesListItem[]>=> {
   try {
     const response = await fetch(baseUrl, {
       method: "POST",
@@ -275,25 +380,25 @@ const getAllHeroSections= async (): Promise<TypeHeroSectionListItem[]>=> {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_KEY}`,
       },
-      body: JSON.stringify({ query: getAllHeroSectionsQuery }),
+      body: JSON.stringify({ query: getAllStoriesQuery }),
     });
 
+    // Get the response as JSON, cast as ProductCollectionResponse
     const body = (await response.json()) as {
-      data: HeroSectionCollectionResponse;
+      data: StoriesCollectionResponse;
     };
 
-    const heroSections =
-      body.data.heroSectionCollection.items.map((item) => ({
-        index: item.index,
-        name: item.name,
+    // Map the response to the format we want
+    const stories =
+      body.data.storiesCollection.items.map((item) => ({
+        id: item.sys.id,
+        title: item.title,
         text: item.text,
-        button: {
-          text: item.buttonText,
-          href: item.buttonUrl
-        },
+        image: item.image,
+        intro: item.intro
       }));
 
-    return heroSections;
+    return stories;
   } catch (error) {
     console.log(error);
 
@@ -301,11 +406,67 @@ const getAllHeroSections= async (): Promise<TypeHeroSectionListItem[]>=> {
   }
 };
 
+const getStoryById = async (
+  id: string
+): Promise<TypeStoriesDetailItem | null> => {
+  try {
+    const response = await fetch(baseUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_KEY}`,
+      },
+      body: JSON.stringify({
+        query: getStoriesByIdQuery,
+        variables: { id },
+      }),
+    });
+
+    const body = (await response.json()) as {
+      data: DetailStoriesResponse;
+    };
+
+    const responseStory = body.data.stories;
+  
+    const stories = {
+      id,
+      title: responseStory.title,
+      intro: responseStory.intro,
+      image: responseStory.image,
+      text: responseStory.text.json,
+    };
+
+    return stories;
+  } catch (error) {
+    console.log(error);
+
+    return null;
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const contentfulService = {
   getAllAnimals,
   getAnimalById,
   getAllAnimalTypes,
-  getAllHeroSections
+  getAllStories,
+  getStoryById,
 };
 
 export default contentfulService;

@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
 
 
 :root {
@@ -15,14 +14,12 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    font-family: "Protest Strike", sans-serif;
 
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  font-family: "Protest Strike", sans-serif;
 
 }
 

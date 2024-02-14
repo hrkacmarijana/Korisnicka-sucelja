@@ -1,61 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
 
 
-.pets{
-    display: flex;
-    flex-direction: column;
-  font-weight: 500;
-    padding: 10vw 8vh;
-    gap: 5vw;
-    line-height: 2.5rem;
-font-family: "Protest Strike", sans-serif;
-
-}
-
-.text-section{
+.blog{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6vh;
+    font-weight: 500;
+    padding: 10vw 8vh;
+    gap: 5vw;
+      font-family: "Protest Strike", sans-serif;
 
+}
+
+
+
+
+.text-section{
+    width: 90%;
+}
+
+.text-section h1{
+    font-size: 3.5vw;
+    font-weight: bold;
+    text-align: center;
+    color: purple;
+    padding-bottom: 5vw;
+}
+
+.stories-section{
+    padding: 6vw 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    justify-content: center;
     
 }
 
 
-.text-section h1{
-    font-size: 4vw;
-    font-weight: bold;
-    text-align: center;
-    color: purple;
-}
-
-.pets-section{
-    display: flex;
-    justify-content: center;
-}
-
-
 .text-section p{
-    font-size: 1.5vw;
+    font-size: 2vw;
+    line-height: 3rem;
 }
 
 
 
 @media screen and (max-width: 700px){
     
-    .pets{
+    .blog{
         
-        padding: 20vw 4vw;
+        padding: 20vw 1vw;
       
     }
 
     .text-section h1{
-        font-size: 10vw;
+        font-size: 6vw;
       
     }
 
     .text-section p{
-        font-size: 4vw;
+        font-size: 3.5vw;
+line-height: 2rem;
+    }
+
+    .stories-section{
+        gap: 10vw
     }
     
      
