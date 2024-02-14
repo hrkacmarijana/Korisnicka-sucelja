@@ -21,12 +21,12 @@ async function Blog() {
           Joyful Journeys <br /> Heartwarming Tales of Love and Friendship
         </h1>
         <p>
-          Welcome to 'Joyful Journeys' – a collection of heartwarming tales
-          filled with love, friendship, and the magic of companionship. Join us
-          as we embark on delightful adventures, where every story is a
-          testament to the joy that animals bring into our lives. Get ready to
-          be inspired and uplifted by the power of unconditional love and the
-          bond between humans and their furry friends.
+          Welcome to Joyful Journeys – a collection of heartwarming tales filled
+          with love, friendship, and the magic of companionship. Join us as we
+          embark on delightful adventures, where every story is a testament to
+          the joy that animals bring into our lives. Get ready to be inspired
+          and uplifted by the power of unconditional love and the bond between
+          humans and their furry friends.
         </p>
       </div>
       <div className="stories-section">
