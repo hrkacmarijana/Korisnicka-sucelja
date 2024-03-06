@@ -12,11 +12,11 @@ import image6 from "public/image6.jpg";
 function About() {
   return (
     <>
-      <div className="cnt bg-purple-200 ">
-        <div className="content">
-          <div className="s section-1">
+      <div className="about about-cnt bg-purple-200 ">
+        <div className="about-content">
+          <div className="about-s about-section-1">
             <h1>ABOUT US</h1>
-            <div className="container">
+            <div className="about-container">
               <p>
                 Welcome to True Paw shelter, a sanctuary for compassion, hope,
                 and second chances. Nestled in Split, Croatia, our shelter
@@ -31,15 +31,15 @@ function About() {
                 commitment to rewriting stories of despair into narratives
                 brimming with joy and belonging.
               </p>
-              <div className="image-container">
+              <div className="about-image-container">
                 <Image src={image1} alt="image1" fill={true} priority />
               </div>
             </div>
           </div>
-          <div className="s end ">
+          <div className="about-s end ">
             <h2>Our story</h2>
-            <div className="container rev">
-              <div className="image-container">
+            <div className="about-container rev">
+              <div className="about-image-container">
                 <Image src={image2} alt="image2" fill={true} priority />
               </div>
               <p>
@@ -56,9 +56,9 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="s">
+          <div className="about-s">
             <h2>Our Mission</h2>
-            <div className="container">
+            <div className="about-container">
               <p>
                 At True Paw Shelter, our mission is to not just rescue animals,
                 but to transform their lives and find them loving, forever
@@ -80,15 +80,15 @@ function About() {
                 <br />
               </p>
 
-              <div className="image-container">
+              <div className="about-image-container">
                 <Image src={image3} alt="image3" fill={true} priority />
               </div>
             </div>
           </div>
-          <div className="s end">
+          <div className="about-s end">
             <h2>Making a Difference, One Paw at a Time </h2>
-            <div className="container  s47">
-              <div className="image-container i4">
+            <div className="about-container  s47">
+              <div className="about-image-container i4">
                 <Image src={image4} alt="image4" fill={true} priority />
               </div>
               <p>
@@ -108,9 +108,9 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="s">
+          <div className="about-s">
             <h2>Our Promise</h2>
-            <div className="container">
+            <div className="about-container">
               <p>
                 We promise to be a voice for the voiceless, a safe haven for the
                 vulnerable, and a beacon of hope for those in search of a loving
@@ -122,15 +122,15 @@ function About() {
                 welcomed into our fold with open arms, cradled in the assurance
                 of a hopeful journey ahead.
               </p>
-              <div className="image-container">
+              <div className="about-image-container">
                 <Image src={image5} alt="image5" fill={true} priority />
               </div>
             </div>
           </div>
-          <div className="s end">
+          <div className="about-s end">
             <h2>Join Our Cause</h2>
-            <div className="container  s47">
-              <div className="image-container">
+            <div className="about-container  s47">
+              <div className="about-image-container">
                 <Image src={image6} alt="image6" fill={true} priority />
               </div>
 
@@ -148,7 +148,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="s s-7">
+          <div className="about-s about-s-7">
             <p>
               Thank you for being an integral part of our mission, for your
               unwavering support, and for championing the cause of our beloved

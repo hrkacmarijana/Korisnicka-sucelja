@@ -12,11 +12,13 @@
 
   .card-slider {
       position: relative;
-      height: 600px;
       display: flex;
       justify-content: center;
       align-items: center;
-  }
+      padding-top: 10vw;
+      padding-bottom: 10vw;
+
+    }
   
   .section-container .card-container {
       display: flex;
@@ -61,3 +63,12 @@
 
       }
    }
+
+   @media screen and (max-width: 1200px){
+    .left-arrow {
+      left: -10vw;
+    }
+    .right-arrow {
+      right: -10vw;
+    }
+  }

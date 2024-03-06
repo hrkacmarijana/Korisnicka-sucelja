@@ -14,7 +14,7 @@ async function Pets() {
 
   return (
     <div className="pets bg-purple-200">
-      <div className="text-section">
+      <div className="pets-text-section">
         <h1>ADOPTABLE PETS</h1>
         <p className="text-justify">
           Welcome to our Pets section, a heartwarming space where you can
@@ -31,7 +31,7 @@ async function Pets() {
         </p>
         <h1>CHOOSE YOUR FURRY FRIEND TODAY</h1>
       </div>
-      <div className="pets-section">
+      <div className="pets-section ">
         <FilterAnimals animals={animals} />
       </div>
     </div>

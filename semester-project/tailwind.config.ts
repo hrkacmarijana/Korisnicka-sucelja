@@ -17,6 +17,14 @@ const config: Config = {
         // Add more custom colors as needed
       },
     },
+    screens: {
+      'xsm': {'max': '639px'},
+      // => @media (min-width: 640px) { ... }
+      'xxsm': {'max': '495px'},
+
+
+     
+    }
   },
   plugins: [],
 };

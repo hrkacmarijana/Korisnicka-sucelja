@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
 
 
-.image-container{
+.about-image-container{
     position: relative;
     width: 44vw;
     height: 45vw;
@@ -12,10 +12,10 @@
     height: 80vh;
 }
 
-.cnt
+.about-cnt
   {font-family: "Protest Strike", sans-serif;}
 
-.content{
+.about-content{
     display: flex;
     flex-direction: column;
     padding: 10vw 4vw;
@@ -27,24 +27,24 @@
 
 }
 
- h1{
+ .about h1{
     font-size: 5vw;
     font-weight: bold;
 
 }
 
-h1, h2{
+.about h1, .about h2{
     color: purple;
 }
 
-.s{
+.about-s{
     display: flex;
     flex-wrap: wrap;
     text-align: justify;
 
 }
 
-.container{
+.about-container{
     display: flex;
     flex-wrap: wrap;
     padding: 3vw 0;
@@ -52,45 +52,45 @@ h1, h2{
     
 }
 
-.container p{
+.about-container p{
     max-width: 42%;
 }
 
-h2{
+.about h2{
     font-size: 4vw;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-p{
+.about p{
     font-size: 1.5vw;
 }
 
-.section-1{
+.about-section-1{
     display: flex;
     flex-direction: column;
 align-items: center;
 }
 
-.s-7{
+.about-s-7{
     width: 100%;
     align-self: center;
 }
 
 
 @media (max-width: 1200px) {
-    p{
+    .about p{
         font-size: 2vw;
         text-align:justify
     }
 
-    h2{
+    .about h2{
         font-size: 4vw;
     }
 }
 
 @media (max-width: 768px) {
-    .container{
+    .about-container{
         flex-direction: column;
         align-items: center;
         row-gap: 5vw;
@@ -98,22 +98,22 @@ align-items: center;
         
     }
 
-    .container p{
+    .about-container p{
         max-width: 100%;
     }
 
-    .s{
+    .about-s{
         align-items: center;
         justify-content: center;
     }
 
-    .content{
+    .about-content{
         padding: 10vw 4vw;
         row-gap: 5vw;
 
     }
 
-    .image-container{
+    .about-image-container{
         width: 100%;
         height: 60vw;
        
@@ -122,15 +122,15 @@ align-items: center;
     .i4{
         height: 95vw;
     }
-    h2{
+    .about h2{
         font-size: 5vw;
         text-align: center;
     }
 
-    h1{
+    .about h1{
         font-size: 8vw;
     }
-    .s-7{
+    .about-s-7{
         width: 100%;
     }
 
@@ -138,14 +138,14 @@ align-items: center;
 }
 
 @media (max-width: 500px){
-    .content{
+    .about-content{
         padding: 20vw 4vw;
         align-items: center;
 
 
     }
 
-    p{
+    .about p{
         font-size: 4vw;
         text-align:justify
     }
@@ -155,16 +155,16 @@ align-items: center;
     }
 
     
-h2{
+.about h2{
     font-size: 8vw;
 }
-h1{font-size: 10vw;}
+.about h1{font-size: 10vw;}
 
-.s{
+.about-s{
     row-gap: 5vw;
 }
 
-.cnt{
+.about-cnt{
     padding: 5vw 0;
 
 }

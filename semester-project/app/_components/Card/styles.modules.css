@@ -1,17 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Protest+Strike&display=swap');
 
-
-h1{
-    color: purple;
+.picture{
+  width: 20rem;
+  height: 20rem;
 }
 
-span{
+.main1 h1{
+    color: purple;
+    font-size: 2.5vw;
+}
+
+.main1 span{
   
     line-height: 2rem;
 
 }
 
-.main{
+.main1{
   font-family: "Protest Strike", sans-serif;
 
+}
+
+@media screen and (max-width:600px){
+  .main1 span
+  {  line-height: 1.5rem;}
+
+  .main1 h1{
+    font-size: 6vw;
+}
+}
+
+@media screen and (max-width:450px){
+  .main1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ .picture{
+  width: 15rem;
+  height: 15rem;
+ }
+ .main1 h1, .main1 span{
+  max-width: 15rem;
+ }
 }

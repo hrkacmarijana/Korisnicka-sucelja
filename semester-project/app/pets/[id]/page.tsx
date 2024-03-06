@@ -23,10 +23,10 @@ async function Animal({ params }: { params: Params }) {
   }
 
   return (
-    <>
+    <div className="pet">
       {animal && (
         <div className="animal bg-purple-200">
-          <div className="banner">
+          <div className="pet-banner">
             {animal.featuredImage && (
               <Image
                 className="animal-img animal-main-img"
@@ -73,7 +73,7 @@ async function Animal({ params }: { params: Params }) {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

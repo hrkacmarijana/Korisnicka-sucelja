@@ -45,15 +45,11 @@ z-index: 2;
 }
 
 
-.cnt-4{
-  text-align:start;
-  left: 35%;
-
-}
-
 .cnt-4 {
   color: black;
   row-gap: 5vw;
+  text-align:start;
+  left: 35%;
 }
 
 .cnt-4 h1{
@@ -185,13 +181,28 @@ background-repeat: no-repeat;
 }
 
 
+.text-cnt h1{
+  font-size: 4vw;
+}
+
+
+.text-cnt span{
+  font-size: 2.5vw;
+}
+
+
+
 
 
 }
 
 @media (max-width: 768px) {
-.background-container, .bg-cnt-2 {
+.background-container {
    height: 50vh;
+}
+
+.bg-cnt-2 {
+  height: 60vh;
 }
 
 .content-container{
@@ -202,7 +213,7 @@ background-repeat: no-repeat;
   content: fit;
 }
 
-#section-3 .container h1{
+#section-3 .container .heading{
   font-size: 8vw;
 }
 

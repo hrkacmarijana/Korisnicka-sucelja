@@ -14,7 +14,7 @@ let imageRatio = image1.width / image1.height;
 export default function Donations() {
   return (
     <>
-      <div className="section bg-purple-200">
+      <div className="donations donations-section bg-purple-200">
         <h1>Donations</h1>
         <p>
           Our donations page is a testament to the power of compassion and
@@ -24,7 +24,7 @@ export default function Donations() {
           yourself – a movement dedicated to kindness, empathy, and the welfare
           of our furry companions.
         </p>
-        <div className="image-container">
+        <div className="donations-image-container">
           <Image src={image1} alt="image1" fill={true} priority />
         </div>
         <p>
@@ -35,7 +35,7 @@ export default function Donations() {
           us to provide essential care, medical treatment, and love to animals
           who have experienced hardship and neglect.
         </p>
-        <div className="image-container">
+        <div className="donations-image-container">
           <Image src={image2} alt="image2" fill={true} priority />
         </div>
         <p>
@@ -46,7 +46,7 @@ export default function Donations() {
           tangible difference in the lives of these deserving creatures,
           offering them a brighter future filled with love and happiness.
         </p>
-        <div className="image-container">
+        <div className="donations-image-container">
           <Image src={image3} alt="image3" fill={true} priority />
         </div>
         <p>
@@ -56,29 +56,29 @@ export default function Donations() {
           considering donating to our cause and for being a vital part of our
           journey towards a more compassionate and inclusive society.
         </p>
-        <div className="image-container">
+        <div className="donations-image-container">
           <Image src={image5} alt="image4" fill={true} priority />
         </div>
 
         <form
-          className="form-container"
+          className="donations-form-container"
           action="/submit-donation"
           method="post"
         >
           <div className="form-group">
-            <label>Full Name</label>
+            <label>Full Name</label><br/>
             <input type="text" name="name" required />
           </div>
           <div className="form-group">
-            <label>Email Address</label>
+            <label>Email Address</label><br/>
             <input type="email" name="email" required />
           </div>
           <div className="form-group">
-            <label>Donation Amount</label>
+            <label>Donation Amount</label><br/>
             <input type="number" name="amount" min="1" required />
           </div>
           <div className="form-group">
-            <label>Message (optional)</label>
+            <label>Message (optional)</label><br/>
             <textarea name="message" rows={2}></textarea>
           </div>
           <div className="button">
