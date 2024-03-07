@@ -24,7 +24,7 @@
 
     }
   
-  .section-container .inner-card-container {
+  .section-container .card-container {
       display: flex;
       column-gap: 2vw;
   }
