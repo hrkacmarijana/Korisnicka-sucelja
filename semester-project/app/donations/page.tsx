@@ -9,7 +9,6 @@ import image5 from "public/donation.png";
 import Image from "next/image";
 import Button from "../_components/Button/Button";
 
-let imageRatio = image1.width / image1.height;
 
 export default function Donations() {
   return (
@@ -57,6 +56,7 @@ export default function Donations() {
           journey towards a more compassionate and inclusive society.
         </p>
         <div className="donations-image-container">
+      
           <Image src={image5} alt="image4" fill={true} priority />
         </div>
 

@@ -24,14 +24,14 @@ const Cards: FC<CardsProps> = ({ animals }) => {
 
   return (
     <>
-      <div className="container">
+      <div >
         <Filter
           categories={AnimalTypes}
           filterItems={filterAnimals}
           allData={animals}
           setItems={setFilteredAnimals}
         />
-        <div className="animals-list">
+        <div className="filter-animals-list">
           {filteredAnimals &&
             filteredAnimals.map((animal) => (
               <div key={animal.id}>

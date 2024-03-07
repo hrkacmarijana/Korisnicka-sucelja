@@ -1,9 +1,10 @@
 import { Metadata } from "next";
-import Card from "../_components/Card/Card";
 import "./pets.modules.css";
-import { useState } from "react";
 import contentfulService from "../lib/contentfulClient";
 import FilterAnimals from "@/app/_components/FilterAnimals/FilterAnimals";
+
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+
 
 export const metadata: Metadata = {
   title: "Pets",

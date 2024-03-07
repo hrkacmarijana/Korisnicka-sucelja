@@ -8,6 +8,10 @@
   .slider-btn {
     align-self: flex-end;
   }
+
+  .container{
+    overflow: hidden;
+  }
   
 
   .card-slider {
@@ -20,7 +24,7 @@
 
     }
   
-  .section-container .card-container {
+  .section-container .inner-card-container {
       display: flex;
       column-gap: 2vw;
   }
